@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VST PLUGINS // MANTISVEX</title>
+  <meta name="description" content="MantisVex VST plugins — synths, effects, and processors engineered for cyberpunk darksynth production. Free and premium downloads." />
+  <meta name="theme-color" content="#05010f" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="vst">
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a href="index.html" class="nav__brand" aria-label="MantisVex home">
+      <span class="nav__mark">▲</span>
+      <span class="nav__name glitch" data-text="MANTISVEX">MANTISVEX</span>
+    </a>
+    <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__links">
+      <a href="index.html">HOME</a>
+      <a href="vst.html" class="is-active">VST PLUGINS</a>
+      <a href="sigilgrid.html">SIGILGRID</a>
+      <a href="index.html#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <p class="hero__eyebrow">AUDIO TOOLS // SIGNAL CHAIN</p>
+    <h1 class="page-hero__title glitch" data-text="VST PLUGINS">VST PLUGINS</h1>
+    <p class="page-hero__sub">The same instruments and processors used across every MantisVex
+      release. Built for VST3 / AU. Windows &amp; macOS.</p>
+  </section>
+
+  <!-- FILTER BAR -->
+  <div class="filterbar" role="tablist" aria-label="Plugin categories">
+    <button class="filterbar__btn is-active" data-filter="all">ALL</button>
+    <button class="filterbar__btn" data-filter="synth">SYNTHS</button>
+    <button class="filterbar__btn" data-filter="fx">EFFECTS</button>
+    <button class="filterbar__btn" data-filter="util">UTILITY</button>
+  </div>
+
+  <!-- PLUGIN GRID -->
+  <section class="plugins">
+    <article class="plugin" data-cat="synth">
+      <div class="plugin__visual" data-hue="320">
+        <div class="plugin__scope"></div>
+      </div>
+      <div class="plugin__info">
+        <span class="plugin__tag">SYNTH</span>
+        <h3>VEXATRON</h3>
+        <p>3-oscillator hybrid synth with a built-in analog-modeled filter ladder and
+          unison detune for wide, gritty darksynth leads.</p>
+        <div class="plugin__meta"><span>VST3 / AU</span><span>WIN / MAC</span></div>
+        <div class="plugin__actions">
+          <a href="#" class="btn btn--primary btn--sm">DOWNLOAD</a>
+          <span class="plugin__price">FREE</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="plugin" data-cat="synth">
+      <div class="plugin__visual" data-hue="280">
+        <div class="plugin__scope"></div>
+      </div>
+      <div class="plugin__info">
+        <span class="plugin__tag">SYNTH</span>
+        <h3>NIGHTBASS</h3>
+        <p>Sub-focused mono bass engine with a sidechain-aware drive stage. Tuned for
+          the chest-rattling low end of dystopian night drives.</p>
+        <div class="plugin__meta"><span>VST3 / AU</span><span>WIN / MAC</span></div>
+        <div class="plugin__actions">
+          <a href="#" class="btn btn--primary btn--sm">DOWNLOAD</a>
+          <span class="plugin__price">$19</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="plugin" data-cat="fx">
+      <div class="plugin__visual" data-hue="190">
+        <div class="plugin__scope"></div>
+      </div>
+      <div class="plugin__info">
+        <span class="plugin__tag">FX</span>
+        <h3>CHROMECHO</h3>
+        <p>Modulated stereo delay with analog BBD emulation, tape wow, and a freeze
+          buffer for endless ambient tails.</p>
+        <div class="plugin__meta"><span>VST3 / AU</span><span>WIN / MAC</span></div>
+        <div class="plugin__actions">
+          <a href="#" class="btn btn--primary btn--sm">DOWNLOAD</a>
+          <span class="plugin__price">FREE</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="plugin" data-cat="fx">
+      <div class="plugin__visual" data-hue="150">
+        <div class="plugin__scope"></div>
+      </div>
+      <div class="plugin__info">
+        <span class="plugin__tag">FX</span>
+        <h3>STATICVEIL</h3>
+        <p>Granular reverb + texture processor. Smear pads into glittering chrome
+          fog with frozen grain clouds and spectral tilt.</p>
+        <div class="plugin__meta"><span>VST3 / AU</span><span>WIN / MAC</span></div>
+        <div class="plugin__actions">
+          <a href="#" class="btn btn--primary btn--sm">DOWNLOAD</a>
+          <span class="plugin__price">$24</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="plugin" data-cat="fx">
+      <div class="plugin__visual" data-hue="20">
+        <div class="plugin__scope"></div>
+      </div>
+      <div class="plugin__info">
+        <span class="plugin__tag">FX</span>
+        <h3>RUSTGATE</h3>
+        <p>Rhythmic gate + bitcrusher with tempo-synced patterns. Slice, mangle, and
+          corrode your signal into glitch artifacts.</p>
+        <div class="plugin__meta"><span>VST3 / AU</span><span>WIN / MAC</span></div>
+        <div class="plugin__actions">
+          <a href="#" class="btn btn--primary btn--sm">DOWNLOAD</a>
+          <span class="plugin__price">FREE</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="plugin" data-cat="util">
+      <div class="plugin__visual" data-hue="240">
+        <div class="plugin__scope"></div>
+      </div>
+      <div class="plugin__info">
+        <span class="plugin__tag">UTILITY</span>
+        <h3>GRIDMETER</h3>
+        <p>All-in-one metering suite — LUFS, correlation, spectrum, and a cyberpunk
+          vectorscope. Keep your mix legal across the grid.</p>
+        <div class="plugin__meta"><span>VST3 / AU</span><span>WIN / MAC</span></div>
+        <div class="plugin__actions">
+          <a href="#" class="btn btn--primary btn--sm">DOWNLOAD</a>
+          <span class="plugin__price">FREE</span>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- INSTALL NOTE -->
+  <section class="section install">
+    <div class="install__box">
+      <h2 class="section__title">// INSTALLATION</h2>
+      <ol class="install__steps">
+        <li>Download the plugin archive for your platform.</li>
+        <li>Copy the <code>.vst3</code> into your system VST3 folder.</li>
+        <li>Rescan plugins in your DAW. Load. Corrupt the signal.</li>
+      </ol>
+      <p class="install__note">All plugins are 64-bit. macOS builds are notarized.
+        Issues? <a href="mailto:mantisvex@gmail.com">Open a channel.</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> MANTISVEX. ALL SIGNALS RESERVED.</p>
+    <p class="footer__meta">BUILT IN THE STATIC // DEPLOYED ON GITHUB PAGES</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

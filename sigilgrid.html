@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SIGILGRID // MANTISVEX</title>
-  <meta name="description" content="SigilGrid — an interactive audiovisual sigil engine by MantisVex. Draw glyphs on the grid and watch the signal respond." />
-  <meta name="theme-color" content="#05010f" />
+  <title>SIGILGRID // MANTIS VEX</title>
+  <meta name="description" content="SigilGrid by Mantis Vex — coming soon. An audiovisual sigil engine." />
+  <meta name="theme-color" content="#070809" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,104 +14,42 @@
 </head>
 <body data-page="sigilgrid">
   <div class="scanlines" aria-hidden="true"></div>
+  <div class="grid-bg" aria-hidden="true"></div>
   <div class="noise" aria-hidden="true"></div>
 
   <header class="nav" id="nav">
-    <a href="index.html" class="nav__brand" aria-label="MantisVex home">
+    <a href="index.html" class="nav__brand" aria-label="Mantis Vex home">
       <span class="nav__mark">▲</span>
-      <span class="nav__name glitch" data-text="MANTISVEX">MANTISVEX</span>
+      <span class="nav__name glitch" data-text="MANTIS VEX">MANTIS VEX</span>
     </a>
     <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
     <nav class="nav__links">
       <a href="index.html">HOME</a>
+      <a href="index.html#listen">MUSIC</a>
       <a href="vst.html">VST PLUGINS</a>
       <a href="sigilgrid.html" class="is-active">SIGILGRID</a>
       <a href="index.html#contact">CONTACT</a>
     </nav>
   </header>
 
-  <!-- HERO + INTERACTIVE GRID -->
-  <section class="sg-hero">
-    <div class="sg-hero__copy">
-      <p class="hero__eyebrow">AUDIOVISUAL // INSTRUMENT</p>
-      <h1 class="sg-hero__title glitch" data-text="SIGILGRID">SIGILGRID</h1>
-      <p class="sg-hero__sub">Draw a sigil on the grid. Each node you light becomes a
-        voice in an evolving darksynth pattern. The glyph <em>is</em> the sound.</p>
-      <div class="sg-hero__cta">
-        <a href="#grid" class="btn btn--primary">ENTER THE GRID</a>
-        <a href="#about-sg" class="btn btn--ghost">WHAT IS IT?</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- INTERACTIVE SIGIL GRID -->
-  <section class="sg-stage" id="grid">
-    <div class="sg-stage__frame">
-      <canvas id="sigil-canvas" width="640" height="640" aria-label="Interactive sigil grid"></canvas>
-      <div class="sg-readout">
-        <span id="sg-nodes">NODES: 0</span>
-        <span id="sg-status">STATUS: IDLE</span>
-      </div>
-    </div>
-    <div class="sg-controls">
-      <button class="btn btn--primary btn--sm" id="sg-play">▶ ACTIVATE</button>
-      <button class="btn btn--ghost btn--sm" id="sg-clear">✕ CLEAR GRID</button>
-      <button class="btn btn--ghost btn--sm" id="sg-random">⚂ RANDOM SIGIL</button>
-      <label class="sg-slider">
-        TEMPO
-        <input type="range" id="sg-tempo" min="60" max="160" value="96" />
-      </label>
-    </div>
-    <p class="sg-hint">Click or tap grid nodes to inscribe your sigil. Press
-      <strong>ACTIVATE</strong> to hear it. Audio uses the Web Audio API — no downloads.</p>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="section" id="about-sg">
-    <div class="section__head">
-      <h2 class="section__title">// THE GLYPH ENGINE</h2>
-    </div>
-    <div class="sg-feats">
-      <div class="sg-feat">
-        <span class="sg-feat__num">◆</span>
-        <h3>NODE = NOTE</h3>
-        <p>Every column is a step in the sequence; every row is a pitch in a dark
-          minor scale. Light a node and it sings on the beat.</p>
-      </div>
-      <div class="sg-feat">
-        <span class="sg-feat__num">◆</span>
-        <h3>LIVE SYNTHESIS</h3>
-        <p>All sound is generated in real time in your browser with the Web Audio
-          API — detuned saws, sub bass, and a resonant filter sweep.</p>
-      </div>
-      <div class="sg-feat">
-        <span class="sg-feat__num">◆</span>
-        <h3>SHAREABLE SIGILS</h3>
-        <p>In the full release, every sigil encodes to a seed you can share,
-          remix, and route into your DAW via the SigilGrid VST bridge.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section sg-cta">
-    <h2 class="section__title">// JOIN THE SIGNAL</h2>
-    <p class="section__lead">SigilGrid is in active development. Get the standalone app
-      &amp; VST when the grid goes live.</p>
-    <div class="contact__links">
-      <a href="mailto:mantisvex@gmail.com?subject=SigilGrid%20Waitlist" class="btn btn--primary">JOIN WAITLIST</a>
-      <a href="vst.html" class="btn btn--ghost">SEE THE PLUGINS</a>
-    </div>
+  <section class="soon">
+    <div class="soon__glyph" aria-hidden="true">⛧</div>
+    <p class="soon__tag">AUDIOVISUAL // INSTRUMENT</p>
+    <h1 class="soon__title glitch" data-text="SIGILGRID">SIGILGRID</h1>
+    <p class="soon__sub">An audiovisual sigil engine in the works. The grid isn't drawn yet —
+      check back when the glyphs start to move.</p>
+    <div class="soon__bar" aria-hidden="true"></div>
+    <p class="soon__status">STATUS: TRANSMISSION INCOMING</p>
+    <a href="index.html#contact" class="btn btn--ghost">GET NOTIFIED</a>
   </section>
 
   <footer class="footer">
-    <p>© <span id="year"></span> MANTISVEX. ALL SIGNALS RESERVED.</p>
-    <p class="footer__meta">BUILT IN THE STATIC // DEPLOYED ON GITHUB PAGES</p>
+    <p>© <span id="year"></span> MANTIS VEX. ALL SIGNALS RESERVED.</p>
+    <p class="footer__meta">FRANCE // DEPLOYED ON GITHUB PAGES</p>
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/sigilgrid.js"></script>
 </body>
 </html>

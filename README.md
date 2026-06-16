@@ -1,26 +1,34 @@
-# MANTISVEX — Website
+# MANTIS VEX — Website
 
-Official site for **MantisVex**, a cyberpunk / darksynth artist. Built as a fast,
-dependency-free static site optimized for **GitHub Pages**.
+Official site for **Mantis Vex**, a French **darksynth / horrorsynth / cyberpunk**
+artist. Built as a fast, dependency-free static site optimized for **GitHub Pages**.
 
 ## Sections
 
 | Page | File | What's there |
 |------|------|--------------|
-| **Landing** | `index.html` | Hero, latest transmissions (track previews), feature strip, about, contact |
-| **VST Plugins** | `vst.html` | Filterable plugin grid (synths / FX / utility), install guide |
-| **SigilGrid** | `sigilgrid.html` | Interactive Web Audio "sigil" sequencer — draw glyphs, hear them play |
+| **Landing** | `index.html` | Hero, embedded Bandcamp players, full discography, bio, platform links |
+| **VST Plugins** | `vst.html` | "Coming soon" placeholder |
+| **SigilGrid** | `sigilgrid.html` | "Coming soon" placeholder |
+
+## Real data wired in
+
+- **Bandcamp:** https://mantisvex.bandcamp.com — used for the embedded players & every discography link.
+- **Spotify:** https://open.spotify.com/artist/5HMkJnRrb6XsjmSzKlRkTO
+- **YouTube:** https://www.youtube.com/channel/UCW8NPJouuJmq6MUjzPr_BlQ
+- **Email:** mantisvex@gmail.com
+
+Featured Bandcamp embeds (by album id): `Glitchpunk` 1254143414 · `Observed Into Being`
+1086371301 · `It, That Craves` 2266996122.
 
 ## Stack
 
 - Plain **HTML / CSS / vanilla JS** — no build step, no frameworks, no dependencies.
-- Fonts via Google Fonts (Orbitron, Rajdhani, Share Tech Mono).
-- All sound is generated client-side with the **Web Audio API** (no audio files to host).
+- Music is streamed via Bandcamp's official `EmbedPlayer` iframes (no audio hosted here).
 - SVG favicon + Open Graph image.
+- Horrorsynth palette: toxic-green / blood-rust on near-black (no neon-outrun cliché).
 
 ## Run locally
-
-It's a static site — just open `index.html`, or serve it:
 
 ```bash
 python -m http.server 8000
@@ -29,25 +37,17 @@ python -m http.server 8000
 
 ## Deploy to GitHub Pages
 
-1. Push these files to the repository root (default branch, e.g. `main`).
-2. In the repo: **Settings → Pages**.
-3. Under **Build and deployment**, set **Source = Deploy from a branch**.
-4. Select branch `main` and folder `/ (root)`. Save.
-5. The site goes live at `https://<username>.github.io/mantisvex-website/`.
-
-Notes:
-- `.nojekyll` is included so GitHub serves files as-is (no Jekyll processing).
-- `404.html` provides a themed not-found page.
-- For a custom domain, add a `CNAME` file with your domain and configure DNS.
+Already live at **https://mantisvex.github.io/mantisvex-website/** (branch `main`, root).
+`.nojekyll` is included so files are served as-is; `404.html` is a themed fallback.
 
 ## Customize
 
 - **Colors / fonts:** CSS custom properties at the top of `css/styles.css` (`:root`).
-- **Tracks:** edit the `.track-card` blocks in `index.html`.
-- **Plugins:** edit the `.plugin` articles in `vst.html` (set `data-cat` to `synth`/`fx`/`util`).
-- **SigilGrid scale / grid size:** `COLS`, `ROWS`, and `scale[]` in `js/sigilgrid.js`.
-- **Real download / social links:** replace the `href="#"` placeholders.
+- **Discography:** edit the `.discog__row` links in `index.html`. Some albums currently
+  point at the main Bandcamp page — swap in their direct `/album/<slug>` URLs once confirmed.
+- **Featured players:** change the `album=<id>` values in the `.embed` iframes.
+- **VST / SigilGrid:** drop real content into `vst.html` / `sigilgrid.html` when ready.
 
 ---
 
-© MANTISVEX. Built in the static.
+© MANTIS VEX. France.

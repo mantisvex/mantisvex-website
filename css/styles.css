@@ -3,17 +3,23 @@
    ========================================================= */
 
 :root {
-  --bg:        #05010f;
-  --bg-2:      #0b0420;
-  --panel:     rgba(18, 8, 40, 0.55);
-  --ink:       #e8e3ff;
-  --ink-dim:   #9c93c7;
-  --neon:      #ff2bd6;   /* magenta */
-  --neon-2:    #14f0ff;   /* cyan    */
-  --neon-3:    #b14bff;   /* violet  */
-  --line:      rgba(177, 75, 255, 0.25);
-  --glow-mag:  0 0 12px rgba(255, 43, 214, 0.7);
-  --glow-cyan: 0 0 12px rgba(20, 240, 255, 0.6);
+  --bg:        #070809;
+  --bg-2:      #0c0f11;
+  --panel:     rgba(16, 20, 19, 0.6);
+  --ink:       #c9cdbf;   /* bone / ash      */
+  --ink-dim:   #6b736a;   /* dim ash-green   */
+  --acid:      #9bdb1f;   /* toxic green     */
+  --acid-2:    #4fae6c;   /* sickly teal     */
+  --blood:     #d23a26;   /* rust-blood      */
+  --line:      rgba(155, 219, 31, 0.16);
+  --glow-acid: 0 0 14px rgba(155, 219, 31, 0.55);
+  --glow-blood:0 0 14px rgba(210, 58, 38, 0.6);
+  /* legacy aliases so older rules keep resolving */
+  --neon:      var(--acid);
+  --neon-2:    var(--acid-2);
+  --neon-3:    var(--blood);
+  --glow-mag:  var(--glow-acid);
+  --glow-cyan: var(--glow-acid);
   --font-disp: "Orbitron", sans-serif;
   --font-body: "Rajdhani", sans-serif;
   --font-mono: "Share Tech Mono", monospace;
@@ -25,7 +31,10 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: radial-gradient(circle at 50% -10%, #1a0840 0%, var(--bg) 55%) fixed;
+  background:
+    radial-gradient(circle at 50% -20%, #14180f 0%, var(--bg) 55%),
+    var(--bg);
+  background-attachment: fixed;
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 18px;
@@ -33,39 +42,44 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
 }
+/* heavy vignette for dread */
+body::after {
+  content: ""; position: fixed; inset: 0; z-index: 58; pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,.75) 100%);
+}
 
-a { color: var(--neon-2); text-decoration: none; transition: color .2s; }
-a:hover { color: var(--neon); }
+a { color: var(--acid); text-decoration: none; transition: color .2s; }
+a:hover { color: var(--blood); }
 
-::selection { background: var(--neon); color: #fff; }
+::selection { background: var(--acid); color: #0a0a0a; }
 
 /* ---------- atmospheric overlays ---------- */
 .grid-bg {
   position: fixed; inset: 0; z-index: 0; pointer-events: none;
   background-image:
-    linear-gradient(rgba(177, 75, 255, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(20, 240, 255, 0.10) 1px, transparent 1px);
-  background-size: 48px 48px;
-  transform: perspective(420px) rotateX(62deg) scale(2.4);
-  transform-origin: 50% 100%;
-  mask-image: linear-gradient(to top, #000 0%, transparent 70%);
-  -webkit-mask-image: linear-gradient(to top, #000 0%, transparent 70%);
-  opacity: .55;
-  animation: gridroll 14s linear infinite;
+    linear-gradient(rgba(155, 219, 31, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(155, 219, 31, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at 50% 30%, #000 0%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000 0%, transparent 75%);
+  opacity: .5;
 }
-@keyframes gridroll { to { background-position: 0 48px, 0 0; } }
 
 .scanlines {
   position: fixed; inset: 0; z-index: 60; pointer-events: none;
   background: repeating-linear-gradient(
     to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 2px,
-    rgba(0,0,0,0.18) 3px, rgba(0,0,0,0) 4px);
-  mix-blend-mode: multiply; opacity: .5;
+    rgba(0,0,0,0.22) 3px, rgba(0,0,0,0) 4px);
+  mix-blend-mode: multiply; opacity: .55;
+  animation: flicker 6s steps(60) infinite;
 }
+@keyframes flicker { 0%,96%,100%{opacity:.55} 97%{opacity:.35} 98%{opacity:.62} 99%{opacity:.4} }
 .noise {
-  position: fixed; inset: 0; z-index: 59; pointer-events: none; opacity: .04;
+  position: fixed; inset: 0; z-index: 59; pointer-events: none; opacity: .06;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grainshift .4s steps(2) infinite;
 }
+@keyframes grainshift { 0%{transform:translate(0,0)} 50%{transform:translate(-4px,3px)} 100%{transform:translate(3px,-2px)} }
 
 /* content sits above overlays */
 .nav, section, .footer { position: relative; z-index: 2; }
@@ -126,9 +140,9 @@ a:hover { color: var(--neon); }
 .glitch::before, .glitch::after {
   content: attr(data-text); position: absolute; inset: 0; clip-path: inset(0 0 0 0);
 }
-.glitch::before { color: var(--neon-2); transform: translate(-2px, 0); mix-blend-mode: screen;
+.glitch::before { color: var(--blood); transform: translate(-2px, 0); mix-blend-mode: screen;
   animation: glitch-x 3.4s infinite linear alternate; }
-.glitch::after  { color: var(--neon); transform: translate(2px, 0); mix-blend-mode: screen;
+.glitch::after  { color: var(--acid); transform: translate(2px, 0); mix-blend-mode: screen;
   animation: glitch-y 2.8s infinite linear alternate; }
 @keyframes glitch-x {
   0%,92%,100% { clip-path: inset(0 0 0 0); transform: translate(-2px,0); }
@@ -364,3 +378,77 @@ a:hover { color: var(--neon); }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; scroll-behavior: auto !important; }
 }
+
+/* =========================================================
+   REAL-DATA COMPONENTS (added in revision)
+   ========================================================= */
+
+/* genre tag row */
+.tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 26px; }
+.tags span {
+  font-family: var(--font-mono); font-size: .7rem; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--ink-dim); border: 1px solid var(--line); padding: 5px 11px;
+}
+
+/* embedded bandcamp players */
+.embeds {
+  max-width: 980px; margin: 0 auto; display: grid; gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.embed {
+  border: 1px solid var(--line); background: #0a0c0a; position: relative;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.embed:hover { border-color: var(--acid); box-shadow: 0 10px 40px rgba(155,219,31,.12); transform: translateY(-4px); }
+.embed iframe { display: block; width: 100%; height: 120px; border: 0; }
+.embed__cap {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 10px;
+  padding: 10px 14px; border-top: 1px solid var(--line);
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing: 1px; color: var(--ink-dim);
+}
+.embed__cap b { font-family: var(--font-disp); color: var(--ink); letter-spacing: 1px; font-size: .82rem; }
+
+/* full discography list */
+.discog { max-width: 860px; margin: 30px auto 0; border-top: 1px solid var(--line); }
+.discog__row {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 16px;
+  padding: 16px 6px; border-bottom: 1px solid var(--line); color: var(--ink);
+  transition: background .2s, padding-left .2s;
+}
+.discog__row:hover { background: rgba(155,219,31,.05); padding-left: 14px; color: var(--acid); }
+.discog__yr { font-family: var(--font-mono); font-size: .8rem; color: var(--ink-dim); letter-spacing: 1px; }
+.discog__name { font-family: var(--font-disp); letter-spacing: 1px; font-size: 1.05rem; }
+.discog__type { font-family: var(--font-mono); font-size: .68rem; letter-spacing: 2px; color: var(--ink-dim); text-transform: uppercase; }
+
+/* platform link buttons */
+.platforms { display: flex; gap: 12px; flex-wrap: wrap; }
+.platform {
+  display: inline-flex; align-items: center; gap: 9px;
+  font-family: var(--font-mono); letter-spacing: 2px; text-transform: uppercase; font-size: .8rem;
+  border: 1px solid var(--line); color: var(--ink); padding: 13px 20px; background: rgba(155,219,31,.03);
+  transition: .2s; clip-path: polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);
+}
+.platform:hover { border-color: var(--acid); color: var(--acid); background: rgba(155,219,31,.1); transform: translateY(-2px); }
+.platform svg { width: 18px; height: 18px; fill: currentColor; }
+
+/* coming-soon stage (VST + SigilGrid) */
+.soon {
+  min-height: 70vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 60px 20px; gap: 22px;
+}
+.soon__glyph { font-size: clamp(3rem, 12vw, 6rem); color: var(--acid); text-shadow: var(--glow-acid);
+  animation: breathe 4s ease-in-out infinite; }
+@keyframes breathe { 0%,100%{opacity:.55;transform:scale(1)} 50%{opacity:1;transform:scale(1.05)} }
+.soon__title { font-family: var(--font-disp); font-weight: 900; font-size: clamp(2.2rem,8vw,5rem); letter-spacing: 4px; }
+.soon__tag { font-family: var(--font-mono); letter-spacing: 6px; color: var(--acid); font-size: .8rem; text-shadow: var(--glow-acid); }
+.soon__sub { max-width: 560px; color: var(--ink-dim); }
+.soon__bar {
+  width: min(420px, 80vw); height: 6px; border: 1px solid var(--line); position: relative; overflow: hidden;
+}
+.soon__bar::after {
+  content: ""; position: absolute; inset: 0; width: 40%;
+  background: linear-gradient(90deg, transparent, var(--acid), transparent);
+  animation: load 2.6s ease-in-out infinite;
+}
+@keyframes load { 0%{left:-40%} 100%{left:100%} }
+.soon__status { font-family: var(--font-mono); font-size: .74rem; letter-spacing: 3px; color: var(--ink-dim); }

@@ -7,9 +7,12 @@ artist. Built as a fast, dependency-free static site optimized for **GitHub Page
 
 | Page | File | What's there |
 |------|------|--------------|
-| **Landing** | `index.html` | Hero, embedded Bandcamp players, full discography, bio, platform links |
-| **VST Plugins** | `vst.html` | "Coming soon" placeholder |
-| **SigilGrid** | `sigilgrid.html` | "Coming soon" placeholder |
+| **Landing** | `index.html` | Hero, embedded YouTube transmissions, full discography, bio, platform links |
+| **VST Plugins** | `vst/index.html` | "Coming soon" placeholder — served at `/vst/` |
+| **SigilGrid** | `sigilgrid/index.html` | "Coming soon" placeholder — served at `/sigilgrid/` |
+
+Pages use directory-style URLs (folder + `index.html`) so links are clean and
+extensionless: `/`, `/vst/`, `/sigilgrid/` — no `.html`.
 
 ## Real data wired in
 
@@ -46,7 +49,7 @@ Already live at **https://mantisvex.github.io/mantisvex-website/** (branch `main
 - **Discography:** edit the `.discog__row` links in `index.html`. Some albums currently
   point at the main Bandcamp page — swap in their direct `/album/<slug>` URLs once confirmed.
 - **Featured players:** change the `album=<id>` values in the `.embed` iframes.
-- **VST / SigilGrid:** drop real content into `vst.html` / `sigilgrid.html` when ready.
+- **VST / SigilGrid:** drop real content into `vst/index.html` / `sigilgrid/index.html` when ready.
 
 ---
 

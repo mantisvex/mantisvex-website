@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VST PLUGINS // MANTIS VEX</title>
-  <meta name="description" content="MantisVex VST plugins — including MASS, a free and open-source adaptive harmonic density processor (VST3). Audio tools for darksynth and horrorsynth production." />
+  <meta name="description" content="Mantis Vex VST plugins — MASS (harmonic density processor) and DOOM Compressor (Mick Gordon-style upward compressor). Free and open-source VST3 audio tools for darksynth and horrorsynth production." />
   <meta name="theme-color" content="#070809" />
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,8 +38,8 @@
   <section class="page-hero">
     <p class="hero__eyebrow">AUDIO TOOLS // SIGNAL CHAIN</p>
     <h1 class="page-hero__title glitch" data-text="VST PLUGINS">VST PLUGINS</h1>
-    <p class="page-hero__sub">Instruments and processors from the Mantis Vex studio.
-      The first one is out now — free and open source.</p>
+    <p class="page-hero__sub">Instruments and processors from the Mantis Vex studio —
+      free and open source, with more on the way.</p>
   </section>
 
   <!-- PLUGIN GRID -->
@@ -59,6 +59,25 @@
         <div class="plugin__actions">
           <a href="https://github.com/mantisvex/mass/releases/latest" class="btn btn--primary btn--sm" target="_blank" rel="noopener">DOWNLOAD</a>
           <a href="https://github.com/mantisvex/mass" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">SOURCE ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="plugin" data-cat="fx">
+      <div class="plugin__visual" style="--h:8">
+        <div class="plugin__scope"></div>
+      </div>
+      <div class="plugin__info">
+        <span class="plugin__tag">FX · FREE &amp; OPEN SOURCE</span>
+        <h3>DOOM COMPRESSOR</h3>
+        <p>A recreation of Mick Gordon's infamous DOOM (2016) upward compressor. Instead of
+          taming peaks it drags <em>everything</em> — reverb tails, noise floor, artifacts —
+          up to 0&nbsp;dBFS, turning dull patches into dense, distorted walls of doom. Floor,
+          Ceiling, Drive and Crush controls with a live LIFT meter.</p>
+        <div class="plugin__meta"><span>VST3 · STANDALONE</span><span>WINDOWS</span><span>MIT LICENSE</span></div>
+        <div class="plugin__actions">
+          <a href="https://github.com/mantisvex/doom-comp/releases/latest" class="btn btn--primary btn--sm" target="_blank" rel="noopener">DOWNLOAD</a>
+          <a href="https://github.com/mantisvex/doom-comp" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">SOURCE ↗</a>
         </div>
       </div>
     </article>
@@ -83,17 +102,17 @@
   <!-- INSTALL NOTE -->
   <section class="section install">
     <div class="install__box">
-      <h2 class="section__title">// INSTALL — MASS</h2>
+      <h2 class="section__title">// INSTALL</h2>
       <ol class="install__steps">
-        <li>Download <code>MASS.vst3</code> from the
-          <a href="https://github.com/mantisvex/mass/releases/latest" target="_blank" rel="noopener">latest release</a>.</li>
-        <li>Copy it into your VST3 folder (e.g. <code>C:\Users\&lt;you&gt;\VST3</code>).</li>
-        <li>Rescan plugins in your DAW. Load. Add weight.</li>
+        <li>Download the plugin from its <strong>DOWNLOAD</strong> button above (unzip if needed).</li>
+        <li>Copy the <code>.vst3</code> into your VST3 folder (e.g. <code>C:\Users\&lt;you&gt;\VST3</code>
+          or <code>%COMMONPROGRAMFILES%\VST3</code>).</li>
+        <li>Rescan plugins in your DAW. Load. Corrupt the signal.</li>
       </ol>
-      <p class="install__note">The binary is unsigned, so Windows SmartScreen may warn on
+      <p class="install__note">The binaries are unsigned, so Windows SmartScreen may warn on
         first run — click <strong>More info → Run anyway</strong>, or right-click the file →
-        <strong>Properties → Unblock</strong>. It's open source under MIT: read or build the
-        code yourself on <a href="https://github.com/mantisvex/mass" target="_blank" rel="noopener">GitHub</a>.</p>
+        <strong>Properties → Unblock</strong>. Everything is open source under MIT — read or
+        build the code yourself on <a href="https://github.com/mantisvex" target="_blank" rel="noopener">GitHub</a>.</p>
     </div>
   </section>
 

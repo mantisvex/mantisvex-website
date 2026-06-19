@@ -19,7 +19,7 @@ extensionless: `/`, `/vst/`, `/sigilgrid/` — no `.html`.
 - **Bandcamp:** https://mantisvex.bandcamp.com — used for the embedded players & every discography link.
 - **Spotify:** https://open.spotify.com/artist/5HMkJnRrb6XsjmSzKlRkTO
 - **YouTube:** https://www.youtube.com/channel/UCW8NPJouuJmq6MUjzPr_BlQ
-- **Email:** mantisvex@gmail.com
+- **Email:** contact@mantisvex.com
 
 Featured Bandcamp embeds (by album id): `Glitchpunk` 1254143414 · `Observed Into Being`
 1086371301 · `It, That Craves` 2266996122.

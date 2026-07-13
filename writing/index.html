@@ -3,27 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The World Is a Computation // MANTIS VEX</title>
-  <meta name="description" content="We are, in all probability, living in a simulation. An essay in six sections — from the physics of information to Bostrom's counting, and the silence of the level above. Read it in English or in French." />
+  <title>WRITING // MANTIS VEX</title>
+  <meta name="description" content="Long-form essays by Mantis Vex — on simulation, consciousness, free will and the machinery underneath. Every text available in English and French." />
   <meta name="theme-color" content="#070809" />
 
   <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="The World Is a Computation // MANTIS VEX" />
-  <meta property="og:description" content="We are, in all probability, living in a simulation. An essay in six sections. EN / FR." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="WRITING // MANTIS VEX" />
+  <meta property="og:description" content="Long-form essays — on simulation, consciousness, free will and the machinery underneath. EN / FR." />
   <meta property="og:image" content="../assets/og-image.svg" />
 
   <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/styles.css?v=2" />
+  <link rel="stylesheet" href="../css/styles.css?v=3" />
 </head>
 <body data-page="writing">
   <div class="scanlines" aria-hidden="true"></div>
   <div class="grid-bg" aria-hidden="true"></div>
   <div class="noise" aria-hidden="true"></div>
-  <div class="essay-progress" id="progress" aria-hidden="true"></div>
 
   <header class="nav" id="nav">
     <a href="../" class="nav__brand" aria-label="Mantis Vex home">
@@ -43,453 +42,42 @@
     </nav>
   </header>
 
-  <!-- ============ ENGLISH ============ -->
-  <article class="essay" id="essay-en" lang="en">
-
-  <header>
-    <p class="eyebrow">Essay · mantisvex.com</p>
-    <h1>The World Is a Computation</h1>
-    <p class="dek">We are, in all probability, living in a simulation. The argument is a chain: felt experience, the "what it is like" of being someone, is a <strong>functional</strong> fact, and therefore reproducible on another substrate; a perfect double of us, identical in every respect but with "no one inside," is nonsense; if experience is reproducible, consciousness does not depend on flesh; and then Bostrom's simple counting makes our own simulation close to certain. What remains out of reach is not the fact but <strong>the level above</strong>: who is running the computation, whether there is anyone at all, and why. This essay defends the chain, then stops, honestly, at the edge of what cannot be known.</p>
-    <div class="runin">
-      <span>Essay</span>
-      <span>2026</span>
-      <span>~32 min read</span>
-    </div>
-  </header>
-
-  <!-- ============ SECTION I ============ -->
-  <section>
-    <span class="marker">I</span>
-    <h2>The intuition that won't let go</h2>
-
-    <p class="lede">I will start by confessing the bias, because hiding it would distort everything that follows. I lean toward the idea that the world is a computation, and that it is running somewhere. This is not a conclusion; it is an inclination: a magnet under the compass, pulling the needle before any bearing has been taken. The whole essay is an exercise in not obeying that magnet without testing it first. But to test it, I first have to look at it at full strength, without prudently shrinking it into a reasonable position. So here is why a mind that cares about rigor can catch itself finding the simulation not far-fetched, but almost natural.</p>
-
-    <p>First, the world lets itself be written down. It can be described in mathematics with a precision that should astonish us far more than it does: some quantities are predicted correctly to the twelfth decimal place<sup class="ref"><a href="#en-ref1">1</a></sup>. We get used to it, we call it physics, and we forget the underlying strangeness: reality seems to be drafted in the very language we use to describe it. As if, beneath matter, there were no other fabric than structure, relation, number. A world made of information would look exactly like this.</p>
-
-    <p>Second, the world comes in packets. Energy, charge, action: nothing flows in a perfectly continuous way; everything is dealt out in indivisible units, in smallest denominations. An analog cosmos, smooth all the way down, would have no reason to have a minimal grain. A computational system would. Quantization looks less like a property of matter than like a data type.</p>
-
-    <p>Then there are the limits, and they are too clean. A maximum speed, absolute, that nothing crosses. A scale below which the question "how long?" stops meaning anything. A purely physical world could, in principle, have neither ceiling nor floor. Ours has both, drawn with a straightedge, like the specifications of a machine: peak throughput, minimum resolution.</p>
-
-    <p>Look more closely at that maximum speed. We call it "the speed of light," but that is a misnomer. Light travels at that speed because it has no mass, not the other way around; what the constant really measures is the speed of <em>causality</em>, the fixed exchange rate between space and time, hard-wired into the engine. And a fixed exchange rate is precisely the kind of thing that gets set. A value that could have been set otherwise. The word that comes to mind, when you stare at it, is not "law of nature." It is "parameter."</p>
-
-    <p>And there is, finally, a clue that is more troubling because it is subjective. Anyone who has spent time building systems, setting constants, defining bounds, watching teeming complexity emerge from a few simple rules, recognizes something in this list. Not a proof: a scent. The world has, for someone who builds worlds, the characteristic smell of a system. You know it is not an argument. You cannot quite shake it either.</p>
-
-    <p>Nothing I have written so far is an argument, and I want to say so before a hurried reader mistakes momentum for demonstration. These are <em>resemblances</em>. Quantization resembles a data type; the speed limit resembles a setting; the Planck length resembles a resolution. The word recurring in every sentence is "resembles," and that is exactly the word a rigorous mind must learn never to confuse with "is." The seductiveness of a thesis and its solidity are two different things, and the surest way to sink a defensible thesis is to rest it on its most seductive arguments rather than its most solid ones. So the next section does the sorting, without mercy, and it starts by demolishing my favorites.</p>
-
-    <details class="layer">
-      <summary><span class="chev">▸</span>&nbsp;one level down · the Planck length is not a pixel</summary>
-      <div class="layer-body">
-        <p>The "pixel" image is beautiful, and false, or at least premature. The Planck length (about 1.6&nbsp;×&nbsp;10⁻³⁵ meters) is not a measured resolution of space. It is the scale below which a theory of quantum gravity becomes indispensable, and where our current theories simply stop predicting anything.</p>
-        <p>Some approaches (loop quantum gravity<sup class="ref"><a href="#en-ref2">2</a></sup>) suggest that space could be discrete at that grain; others (string theory) do not imply it; and observational searches for spacetime "foam" have, to date, found nothing<sup class="ref"><a href="#en-ref3">3</a></sup>. The resemblance to a pixel is therefore evocative, not established. It is exactly the kind of distinction that all of Section&nbsp;II is about to apply, argument by argument.</p>
-      </div>
-    </details>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <p class="hero__eyebrow">LONG-FORM // SIGNAL IN TEXT</p>
+    <h1 class="page-hero__title glitch" data-text="WRITING">WRITING</h1>
+    <p class="page-hero__sub">Essays on simulation, consciousness and the machinery underneath.
+      Every text is available in English and French — switch anytime while reading.</p>
   </section>
 
-  <!-- ============ SECTION II ============ -->
-  <section>
-    <span class="marker">II</span>
-    <h2>What is real physics, and what isn't</h2>
+  <!-- TEXT INDEX -->
+  <section class="texts">
 
-    <p>For a long time, my favorite argument was this one. In the double-slit experiment, a particle behaves like a wave as long as you are not looking, and like a particle the moment you measure it. An irresistible translation for anyone who has ever opened a game engine: the universe only computes what is observed. It's level of detail: you render in high resolution only what enters the player's view; everything else runs degraded to spare the machine. Quantum physics would be the signature of a system managing its resources. I believed it. I defended it. And it is wrong. Not approximate, not exaggerated: wrong, on the meaning of a single word.</p>
-
-    <p>The word is "observation." In a popularizer's mouth, it suggests a gaze, a consciousness, a player in front of a screen. In the formalism, it means any <em>interaction</em> that couples the system to its environment: a photon striking it, an air molecule brushing past it, an inert, switched-off detector in an empty room. The system "picks" a state the moment it interacts with anything at all, whether or not any mind takes an interest. The process has a name, decoherence<sup class="ref"><a href="#en-ref4">4</a></sup>, and it needs no witness: it happens inside stars, inside rocks, inside the oceans of exoplanets no one will ever look at. So there is no economy tied to attention. The universe does not render "what you look at": it renders everything that interacts, which is to say, near enough, everything, all the time. An engine that computes everything at all times is precisely an engine that does no LOD. My best argument, examined up close, was testifying against me.</p>
-
-    <p>I leave it on display, dismantled, because it teaches the rule that governs the rest of this section: the simulation thesis attracts secondhand physics, and that secondhand physics is its worst enemy. Whenever a "quantum" argument seems to prove the simulation in three sentences, it almost always rests on a word that does not mean, in the formalism, what it means in conversation. The sorting that follows is not an exercise in caution. It is hygiene: if the world really is a computation, it deserves to be defended with arguments that survive a reader who knows.</p>
-
-    <details class="layer">
-      <summary><span class="chev">▸</span>&nbsp;one level down · two more false friends: the conscious observer and entanglement-as-messenger</summary>
-      <div class="layer-body">
-        <p>The first false friend is the LOD's big brother: "consciousness creates reality." Same root, same error. A measuring device decoheres the system exactly as an eye would, because what matters is the physical coupling, not the subjective experience. A few physicists historically flirted with a role for consciousness (von Neumann<sup class="ref"><a href="#en-ref5">5</a></sup>, then Wigner<sup class="ref"><a href="#en-ref6">6</a></sup>, who later retracted); it is today a marginal position, and nothing in the data requires it.</p>
-        <p>The second is entanglement as "instantaneous communication," the shortcut in the code, the hole in the network. Two entangled particles show perfect correlations at a distance; that is true and it is dizzying. But a theorem, known as no-communication<sup class="ref"><a href="#en-ref7">7</a></sup>, proves that no information can travel through that channel: each measurement's outcome is locally random, and the correlation only appears when the two logbooks are compared, which requires a classical channel, bounded by the speed of causality. Entanglement does not punch a hole in the engine; it scrupulously respects its speed limit.</p>
+    <a class="textcard" href="you-are-a-machine/">
+      <div class="textcard__meta">
+        <b>ESSAY 002</b><span>2026</span><span>~39 MIN</span><span>EN / FR</span>
       </div>
-    </details>
+      <h2 class="textcard__title">You Are a Machine</h2>
+      <p class="textcard__alt">Vous êtes une machine</p>
+      <p class="textcard__dek">Free will is not a power you exercise. It is a feeling your
+        machine produces — the lossy rendering of a real fact, misdescribed as the power to be
+        a cause without a cause. Nobody is spared, the author included.</p>
+      <span class="textcard__go">READ →</span>
+    </a>
 
-    <p>So much for the clearing. Now, what holds. Because once the pop is swept away, real physics remains that points in the direction of information, and it is stranger than the false arguments it replaces.</p>
-
-    <p>The first solid piece fits in one sentence: information is physical. Not metaphorically: thermodynamically. Erasing one bit of information, anywhere, on any substrate, has a minimal, incompressible energy cost, set by temperature. This is not an engineering convention; it is a bound of nature, stated in 1961<sup class="ref"><a href="#en-ref8">8</a></sup> and experimentally verified since<sup class="ref"><a href="#en-ref9">9</a></sup>. What it means, if you take it seriously: information is not a way of talking about matter. It is a quantity that matter counts, bills and conserves, on the same footing as energy.</p>
-
-    <p>The second piece is the deepest result of theoretical physics in the last fifty years, and it comes from an unexpected place: black holes. When you throw matter into a black hole, its horizon grows, and you can compute the maximum amount of information the swallowed region could have contained. The result is a quiet scandal: that amount is proportional to the <em>surface</em> of the horizon, not to its volume. As if everything a three-dimensional region of space can hold in information actually fit on its two-dimensional boundary. This is the holographic principle, and it does not come from a forum: it comes from Bekenstein's work on black-hole entropy<sup class="ref"><a href="#en-ref10">10</a></sup>, generalized by 't Hooft<sup class="ref"><a href="#en-ref11">11</a></sup> and Susskind<sup class="ref"><a href="#en-ref12">12</a></sup>. The most sober reading you can give it is already vertiginous: volume, depth, space itself might be a redundant description, a rendering, of something thinner living on an edge.</p>
-
-    <p>And there is a third thread, more recent and less finished, which I give for what it is: a research program, not an established result. In certain theoretical models, the geometry of spacetime appears to <em>emerge</em> from quantum entanglement: undo the entanglement between two regions, and the space connecting them tears. If this direction pans out, space would not be the stage on which information moves: it would be manufactured by it. Wheeler's formula taken literally: <em>it from bit</em><sup class="ref"><a href="#en-ref13">13</a></sup>.</p>
-
-    <details class="layer">
-      <summary><span class="chev">▸</span>&nbsp;one level down · the exact status of each brick</summary>
-      <div class="layer-body">
-        <p><em>Established:</em> Landauer's principle (bound formulated in 1961, experimental confirmations from 2012 onward); Bekenstein-Hawking entropy and the entropy/surface proportionality for black holes.</p>
-        <p><em>Strongly supported but theoretical:</em> the holographic principle as a general property of quantum gravity. Its most precise realization is Maldacena's AdS/CFT correspondence (1997)<sup class="ref"><a href="#en-ref14">14</a></sup>, demonstrated in a toy universe whose geometry is not ours. The transposition to our universe is largely conjectured, not proven.</p>
-        <p><em>Research program:</em> spacetime emerging from entanglement (Van Raamsdonk<sup class="ref"><a href="#en-ref15">15</a></sup>; the ER&nbsp;=&nbsp;EPR conjecture of Maldacena and Susskind, 2013<sup class="ref"><a href="#en-ref16">16</a></sup>). Serious, active, not concluded.</p>
-        <p>The difference between this list and the false friends above is not the degree of strangeness, which is greater here. It is that every statement survives the question: "what exactly does the formalism say?"</p>
+    <a class="textcard" href="the-world-is-a-computation/">
+      <div class="textcard__meta">
+        <b>ESSAY 001</b><span>2026</span><span>~32 MIN</span><span>EN / FR</span>
       </div>
-    </details>
+      <h2 class="textcard__title">The World Is a Computation</h2>
+      <p class="textcard__alt">Le monde est un calcul</p>
+      <p class="textcard__dek">We are, in all probability, living in a simulation. The argument
+        is a chain — felt experience is functional, so the counting applies. This essay defends
+        the chain, then stops, honestly, at the edge of what cannot be known.</p>
+      <span class="textcard__go">READ →</span>
+    </a>
 
-    <p>Let us take stock of what the sorting leaves standing, because it is what will carry everything that follows. What real physics suggests is not "someone is watching us and the universe is saving resources." It is something more austere and more radical: information is a physical quantity in its own right; the capacity of a region of space is counted on its surface like that of a recording medium; and space itself may be a derived structure rather than a given. None of this proves a simulator. All of it, however, makes the foundation statement perfectly respectable: the world behaves, down to its deepest laws, like a system whose substance is information. The question is no longer whether the world is a computation: that is the most natural reading of the above. The question is whether that computation has an inside. That is the subject of the next section, and it is where everything is decided.</p>
   </section>
-
-  <!-- ============ SECTION III ============ -->
-  <section>
-    <span class="marker">III</span>
-    <h2>Felt experience is functional</h2>
-
-    <p>Everything so far established the foundation: the world behaves like a system whose substance is information. But the foundation is not enough. For the simulation argument to get off the ground, for it to be even <em>possible</em> that we are simulated beings, one precise thing must be true: consciousness must be able to exist on a substrate other than flesh. Not intelligence: consciousness. Not the ability to solve problems, hold a conversation, compose music: the raw fact that there is, behind the behavior, <em>something it is like</em> to be the system<sup class="ref"><a href="#en-ref17">17</a></sup>. This is the lock on the whole thesis, and this is where I break it. Here is the position I defend, in one sentence: felt experience is a functional fact, it is what a certain arrangement does rather than a mysterious fabric layered on top, and consequently, if you simulate a human being perfectly, you have not built an imitation of a human being. You have built a human being.</p>
-
-    <p>The classic objection bears a famous name: the philosophical zombie<sup class="ref"><a href="#en-ref18">18</a></sup>. Imagine, it says, a perfect copy of you: atom for atom, function for function, response for response. It laughs at your jokes, pulls its hand from the fire, writes essays about consciousness. But inside: nothing. No one. The lights are on, nobody's home. If such a being is even <em>conceivable</em>, the objection continues, then felt experience is something over and above function, an extra the copy did not receive, and no simulation, however perfect, guarantees there is anyone in there.</p>
-
-    <p>I think this thought experiment is a sleight of hand<sup class="ref"><a href="#en-ref19">19</a></sup>, and I will say where the card is palmed. The zombie is described as identical to you in everything: same brain, same states, same processes, down to the last action potential. Then it is declared: "but without the felt experience." Yet declaring is not conceiving. Something has been removed by decree, without anyone being able to say <em>what</em>, since by hypothesis nothing is missing: no gear, no signal, no physical or functional difference of any kind. Felt experience has been treated like a lamp you could unscrew from the mechanism without the mechanism changing. But if you can unscrew it and nothing changes, then it was wired to nothing, and one may ask why <em>we</em> would have it. And if it is wired, if felt experience does something, plays a role, leaves a trace, then the perfect copy copied it along with everything else, and the zombie evaporates. The thought experiment does not describe a possible being: it describes a contradiction dressed up as a scenario. It asks you to imagine an intact mechanism missing what the mechanism produces.</p>
-
-    <p>An image from my world, for those it will speak to. Take a piece of music. Not the score, the render: the final file, sample by sample. Copy it bit for bit. Then declare: "the copy is identical in every respect, but it doesn't have the <em>sound</em>." The sentence has correct grammar and no meaning. Sound is not a substance poured into the file afterward; sound is what the file <em>is</em>, read by the appropriate system. There is no residue to forget in the copy, because there was never anything there but structure. My thesis is that felt experience is to the brain what sound is to the file: not an occupant of the mechanism, but the mechanism itself, considered from the only point of view that exists within it. Copy the arrangement, and you have copied the point of view, because the point of view was never anything other than the arrangement running.</p>
-
-    <p>I want to be precise about what this position claims and what it does not, because it gets caricatured from both sides. It does not say that felt experience is an illusion: it is as real as the sound of the track, which is to say entirely. It does not say that any program feels: a thermostat has no more of an inside than a sine wave is a symphony; what matters is the arrangement, its richness, its loops, the way it models itself, and we still do not know where the threshold lies. It says one exact and bounded thing: <em>whatever</em> produces felt experience in a brain, it is a fact of organization, and facts of organization do not know their substrate. An arrangement realized in carbon, in silicon, or in the pulses of a computation is the same arrangement. If the first has an inside, the others do.</p>
-
-    <details class="layer">
-      <summary><span class="chev">▸</span>&nbsp;one level down · Mary, the serious objection</summary>
-      <div class="layer-body">
-        <p>There is an argument against this position stronger than the zombie, and passing over it in silence would be cheating. It is called the knowledge argument<sup class="ref"><a href="#en-ref20">20</a></sup>, and it stars Mary: a neuroscientist who knows <em>everything</em> there is to know, physically and functionally, about color vision, but who has lived her entire life in a black-and-white room. One day she steps out and sees red for the first time. Question: does she learn something? The near-universal intuition says yes: she learns <em>what it is like</em>. But if she learns a new fact while already possessing all the physical and functional facts, then facts of another nature exist, and my thesis falls.</p>
-        <p>The functionalist reply, which I make my own, attacks the verb "learn." What Mary acquires on seeing red is not one more fact about the world; it is one more <em>capacity</em><sup class="ref"><a href="#en-ref21">21</a></sup>: to recognize red, to represent it, to call it up. She goes from knowledge <em>about</em> the state to an instantiation <em>of</em> the state; her brain now runs a process it previously only described. Knowing the complete mechanics of a bicycle and knowing how to ride one are two different things, and no one concludes from that difference that balance is a non-physical substance. Mary's thrill before the red is real; it is not information leaking out of physics, it is physics happening in her for the first time.</p>
-        <p>A concession owed to the reader: this reply is defended, argued, majority opinion among functionalists; it is not unanimous, and the debate has been alive for forty years. A notable fact: Frank Jackson, the very inventor of the Mary argument, ended up switching sides and rejecting it<sup class="ref"><a href="#en-ref22">22</a></sup>. That is not a proof, philosophers change their minds like everyone else, but when the prosecutor withdraws his own complaint, the defense is allowed to mention it.</p>
-      </div>
-    </details>
-
-    <p>So the lock is broken, and we should measure what that unlocks. If felt experience is functional, then consciousness is independent of its substrate, <em>substrate-independent</em> to give it its technical name. It can exist in flesh, in silicon, in a computation running on a machine we cannot imagine. Which means two things, and the second is the one that brings the vertigo. First: a sufficiently fine simulation of a human brain would not be the portrait of a mind: it would be a mind, with an inside as real as yours. Second: nothing in the nature of consciousness therefore rules out that <em>ours</em> is precisely that: an arrangement running, somewhere, on a substrate that is not what it seems. Until now, that possibility hung on an "if": <em>if</em> consciousness is simulable. That "if" has just fallen. All that is left is to count. The counting is the next section.</p>
-  </section>
-
-  <!-- ============ SECTION IV ============ -->
-  <section>
-    <span class="marker">IV</span>
-    <h2>So the counting applies</h2>
-
-    <p>The argument that carries this section is twenty years old, fits on a page, and is almost always misquoted, including by those who invoke it. It gets summarized as "Bostrom showed we live in a simulation." Bostrom showed no such thing, and the exact version is more interesting than the legend. What he demonstrated is a <em>trilemma</em><sup class="ref"><a href="#en-ref23">23</a></sup>: of three propositions, at least one is almost certainly true. One: almost no civilization reaches the technological stage where consciousnesses can be simulated. Two: those that reach it almost all have no desire to. Three: we almost certainly live in a simulation. The argument does not choose among the three: it only establishes that you cannot refuse them all. And its mechanics are brutally simple: if simulated consciousnesses can exist, and if civilizations produce them, then each parent civilization can run thousands of simulations, each containing billions of minds. Simulated minds then numerically swamp "base" minds: a thousand to one, a million to one. And a mind picked at random from that population, you for instance, has the corresponding probability of being on the rendered side.</p>
-
-    <p>Notice what the previous section just did to this argument. Its most fragile premise has always been the first clause: <em>if simulated consciousnesses can exist</em>. As long as it stayed open, the whole edifice hung suspended: you could grant the counting and escape through the door of "but maybe consciousness can't be simulated." That is the door Section&nbsp;III closed. If felt experience is functional, simulated consciousness is not a hypothesis to verify: it is a consequence. The trilemma stops being conditional. All that remains is to look at the two branches that would separate us from the third, and to say honestly why I bet on neither.</p>
-
-    <p>The first branch is a cleaver: almost no civilization survives to technological maturity. It is possible; it is even the darkest branch, and nothing rules it out. But measure what it demands in order to save us from the counting. It is not enough that <em>many</em> civilizations collapse; <em>almost all</em> must collapse, everywhere, always: a failure rate so close to one hundred percent that no lineage, in any galaxy, over any billion years, crosses the line. Because a handful of survivors is enough for simulations to proliferate and the ratio to become crushing again. And there is an awkward detail: the required computing power is not distant magic. We, an adolescent civilization still playing with matches, already simulate crude worlds and train systems that hold conversations. The gap between what we do and what simulating minds requires is immense, but it is a gap of scale, not of kind. Betting on the first branch means betting that the step is uncrossable for <em>nearly everyone</em>, when it is already visible from where we stand.</p>
-
-    <p>The second branch is stranger still: mature civilizations exist, the power is there, and almost none ever uses it to simulate minds. For this branch to hold, a near-universal convergence is required: millions of civilizations, with radically different histories, values and curiosities, must <em>all</em> renounce the same thing. Out of ethics, out of boredom, out of prohibition: whatever the motive, it must be shared by almost all, almost always, with no lasting exception. Yet we have exactly one data point on what a curious species does with computing power, and that data point is us. It is unambiguous: we simulate everything we can simulate, as soon as we can. Worlds, economies, worm brains, conversations. The history of computing is a history of ever-finer simulations, and nothing suggests a voluntary stopping point. Extrapolating our own trajectory proves nothing about others; but betting on the second branch means betting <em>against</em> the only example we have.</p>
-
-    <p>So what remains are the probabilities as I see them. And I do mean: as I see them, because this paragraph is a judgment, not a theorem. The first branch requires a near-perfect extinction; the second, a near-perfect abstinence. Two near-perfections, each of which must hold across the whole extent of the cosmos and of time, against a third branch that requires nothing but banality: that somewhere, at least once, a civilization did what we already do in miniature. I have spent this essay cutting seductive arguments in favor of solid ones; this one survives the cut. When a conclusion demands only banality and its only two escape routes each demand a statistical miracle, I choose banality. We are, in all likelihood, on the simulated side of the count.</p>
-
-    <details class="layer">
-      <summary><span class="chev">▸</span>&nbsp;one level down · the hidden assumption in "a mind picked at random"</summary>
-      <div class="layer-body">
-        <p>The counting rests on a move that must be named, because it is the philosophical hinge of the whole argument: treating yourself as "a randomly drawn observer" from the total population of minds. This is the self-sampling assumption<sup class="ref"><a href="#en-ref24">24</a></sup>. It looks innocent (if 999 out of 1000 minds are simulated, why would you be the exception?), but it is not free, and we know a case where the same reasoning yields a conclusion almost no one accepts: the doomsday argument<sup class="ref"><a href="#en-ref25">25</a></sup>, which "proves" by simple counting of past and future humans that the end of humanity is near. Same machinery, embarrassing conclusion. Two readings are possible: either self-sampling is reliable and you must swallow doomsday along with the simulation; or it has subtle validity conditions, and the debate over which ones is still open.</p>
-        <p>My position: the simulation case is more robust than the doomsday case, because the counting there ranges over coexisting minds that are qualitatively indistinguishable from the inside, not over a position in a temporal ordering; but I do not claim the question is closed. This is the most philosophically loaded link in the chain, and the reader who wants to refuse it must refuse it <em>here</em>: everything else holds.</p>
-      </div>
-    </details>
-
-    <p>Let us recap the chain, because it is now complete and should be seen in a single glance. The world behaves like an information system: that was the foundation. Felt experience is functional, so consciousness does not depend on its substrate: that was the lock, and it broke. Therefore simulated consciousnesses are possible; therefore the trilemma applies unconditionally; and of its three branches, two require statistical near-miracles while the third requires only banality. Conclusion: we are, in all probability, arrangements running on a substrate that is not what it appears to be. I am aware of the weight of that sentence, and I stand by it. But this is precisely where the essay changes nature, because everything established so far concerns <em>our</em> level. About what lies above (who computes, on what, why, and whether there is even a "who"), the counting says nothing. Nothing at all. And that is where the real question begins.</p>
-  </section>
-
-  <!-- ============ SECTION V ============ -->
-  <section>
-    <span class="marker">V</span>
-    <h2>The level above, and the admin's silence</h2>
-
-    <p>Let us follow the logic where it leads, because it does not stop at our level. If we are simulated, then at least one level exists above ours. Call it what computer people call this kind of thing: the level with write permissions. But the reasoning that placed us inside a simulation applies, word for word, to that level too. If it is capable of simulating conscious worlds (it just did; we are the proof), then by the same counting, it is itself almost certainly simulated by a level above it. And so on. The conclusion is not "we live in a simulation": it is "we live somewhere in a stack of simulations whose height and summit we do not know," a tower in which every floor mistakes its ceiling for the sky. Statistically, being the very first simulation, the one running directly on base reality, is as improbable as being base reality itself. We are somewhere in the middle. That is all the counting licenses us to say, and it must be seen for what it is: enormous, and almost nothing.</p>
-
-    <p>Because here is the question that obsesses anyone who accepts the above, and I accept it: who computes? We want a face. A god, a teenager from a higher civilization, an artificial intelligence archiving its ancestors, a process with no intention at all. And here I must do to my own hopes what I did to my own arguments: put them to the blade. Each of these figures is a garment cut from our own wardrobe. A "god" is an enlarged father. A "teenage gamer" is an enlarged developer. An "archivist AI" is our own technology enlarged. Every conjecture about the admin smuggles our categories (intention, curiosity, purpose, play) up to a level that nothing guarantees contains them. We reason about the simulator the way a video-game character would reason about us: by ascribing us health bars, quests and an inventory, because those are the only concepts its world supplies. The error would not be getting the details wrong. The error would be believing that the right categories exist in our lexicon.</p>
-
-    <p>It will be objected that the admin's silence is itself a clue, that a creator who does not manifest tells us something of his intentions: indifference, protocol, cruelty. But that is the same trap, one notch deeper. Interpreting a silence requires knowing what speaking would have meant. We have no idea what would count, for the level above, as "manifesting": its interventions, if they exist, could saturate every second of our world without our having the organ to perceive them; or our entire universe could be, from its point of view, one line in a log file that nothing justifies opening. Silence is not a datum. It is the absence of a datum, and the absence of a datum cannot be read.</p>
-
-    <p>This lucidity should be carried to its end, because it has a precise shape that can be named. Our situation is not that of the ignorant who has not yet found the answer: it is worse, and more interesting. Imagine a being living on a sheet of paper, in a two-dimensional world<sup class="ref"><a href="#en-ref26">26</a></sup>. Push a finger through its sheet: it will not see a finger. It will see a circle appear out of nowhere, grow, shrink, vanish. It can measure that circle all its life with perfect instruments: it will never form the concept "finger," nor the concept "up," because the dimension containing them does not exist in its mental geometry. Its ignorance has a <em>shape</em>, and that shape is invisible to it: it cannot know what it is missing, because it would already need the missing dimension to perceive its absence. We are that being. The level above is not hidden from us like a secret that could be cracked: it is inaccessible to us the way depth is inaccessible to the plane. And the most vertiginous part is not what we do not know about the admin. It is that we do not know the <em>list</em> of what we do not know, that we may be missing the very dimensions in which the question "who computes?" makes sense.</p>
-
-    <details class="layer">
-      <summary><span class="chev">▸</span>&nbsp;one level down · can we at least test that there is a level?</summary>
-      <div class="layer-body">
-        <p>Only one serious attempt has been published. In 2012, Beane, Davoudi and Savage noticed<sup class="ref"><a href="#en-ref27">27</a></sup> that our own particle-physics simulations run on a grid, a discrete lattice, and that if the universe ran on a similar grid, it would leave a signature: an anisotropy in the spectrum of ultra-high-energy cosmic rays, aligned with the lattice axes. People looked. Nothing. But the null result only tests simulators that would compute the way we did in 2012: a simulator using any other architecture slips under the radar. The test does not constrain the hypothesis; it constrains our imagination.</p>
-        <p>And the problem is structural, not technical. Any observed anomaly always admits two readings, an unexpected physical law or an artifact of the computation, and nothing, from the inside, allows you to decide between them. A good enough simulation is undetectable by construction; the only conceivable "proof" would be a voluntary intervention from the level above. In other words: a revelation. The irony should be measured: the most technophile hypothesis in modern metaphysics, pushed to its maximum rigor, lands exactly on the epistemic regime of the religions, that of a created world, a mute creator, and the waiting for a sign.</p>
-      </div>
-    </details>
-
-    <p>Which brings me to the most expensive concession of this essay, and I make it without anesthesia because it is true. Grant everything: the foundation, the lock, the counting, the stack of levels. What have we explained? The world has laws: why these? Answer: because the level above set them. But the level above has its own laws: why <em>those</em>? Something exists rather than nothing: why? Answer: because a computation is running. But the computation's substrate exists: why <em>it</em>? Every answer moves the question up one level without ever resolving it. "The world is simulated" explains the world exactly the way "God made it" explains it: by pushing the mystery back one notch and dressing it in contemporary vocabulary. I have defended this thesis across hundreds of lines, and I stand by every link, but I refuse to make it say what it does not say. It does not answer the why. It says nothing about the laws above. And it leaves intact, at every level of the stack, the only enigma that has ever seemed real to me: that there are, somewhere in the computation, arrangements for which the computation <em>is like something</em>. The simulation is not the answer to the great why. It is the rigorous demonstration that the answer sits one level higher than anything we will ever reach, and that it always has. What remains is what to do once you have understood that. That is the subject of the last section.</p>
-  </section>
-
-  <!-- ============ SECTION VI ============ -->
-  <section>
-    <span class="marker">VI</span>
-    <h2>What remains, and what it costs</h2>
-
-    <p>Let us take inventory, coldly, the way you close out a worksite. What I can show: the world behaves like an information system, down to its hardest results. What I can support by argument: felt experience is functional, so consciousness does not depend on its substrate, so the counting applies, so we are almost certainly simulated. What I wager without being able to show it: the height of the stack, the middle where we float. And what I will never know, by construction and not by laziness: who computes, on what, why, and whether the question itself makes sense in the dimensions we lack. Three floors of decreasing certainty, and a final wall. That is the exact perimeter of what an honest mind can hold on this subject at this point in history. Anything claiming more is selling something.</p>
-
-    <p>What remains is to draw the consequences for the one living inside, and the first concerns freedom. In a computed world, every state follows from the previous one: free will in the strong sense, a will that would escape causality, does not survive this essay, and I will not pretend to half-regret it. It did not survive anything else either. But something remains, and that something is more solid than the freedom we lose. For most sufficiently rich systems, no shortcut exists: no formula yields the final state without unrolling the computation step by step. This is called computational irreducibility<sup class="ref"><a href="#en-ref28">28</a></sup>, and it changes the meaning of what we are. You are determined, yes. But you are incompressible. No one, not even the level above if it exists, can know what you will do other than by letting you do it. Your life is not the reading of a book already written: it is the writing of the book, at real speed, with no abridged version possible. It is not the freedom of the cause. It is the freedom of the unpredictable, and it is the only one that ever existed.</p>
-
-    <details class="layer">
-      <summary><span class="chev">▸</span>&nbsp;one level down · computational irreducibility</summary>
-      <div class="layer-body">
-        <p>The concept comes from Stephen Wolfram, who isolated it while studying cellular automata: systems with childishly simple rules, some of which produce complexity that no analysis condenses. For these systems, predicting the state at step one thousand requires computing the thousand steps: the fastest simulation of the system is the system itself. This is not a limit of our instruments: it is a mathematical property of the process.</p>
-        <p>Applied to us, the consequence is precise: even in a perfectly deterministic universe, the future of a system like a brain, a society or a biosphere can be rigorously unpredictable from inside and outside alike, not through ignorance, but because no path shorter than its unfolding exists. Determinism stays true; prediction stays impossible. Both hold together, and it is in the gap between them that what latitude we have resides.</p>
-      </div>
-    </details>
-
-    <p>The second consequence is the price, and I promised it without anesthesia. Section&nbsp;III won the argument by making felt experience a function. Now the cost must be paid. As long as lived experience passed for a fabric apart, it was a foothold outside the mechanism: whatever happened to the world, this at least remained, the one thing I am sure of, of a nature nothing else shares. By bringing it back into the world of arrangements, I stripped it of that status. It remains real, entirely. It remains mine, in the only sense in which a point of view belongs to the arrangement running it. It will still be extinguished, and that extinction remains what it always was: the end of everything there is, for the one being extinguished. But it has ceased to be of a different nature from the rest. The one certainty I had left, that there is this, now, is itself now a line in the computation. I traded my foothold for an argument. I would make the trade again, because I prefer a truth that costs me to a consolation that flatters me. But I will not pretend it costs nothing.</p>
-
-    <p>And yet one thing survives this stripping, and it is not a consolation, it is a fact of structure. A computation that halts has computed. An execution that ends has taken place, and nothing that comes after can make it not have taken place. The nothingness that follows has no retroactive power: it erases the process's future, not its having-been. If we are arrangements running somewhere in a stack of mute levels, then every moment of the unfolding is exactly as real as the substrate allows, and it is so once and for all. It is not much. It is what remains when you have refused to lie to yourself, and I note it without emphasis: the refusal to lie to yourself always leaves less than you hoped, and always more than nothing.</p>
-
-    <p>I end where I began, with the confession. The magnet under the compass is still there: I still lean toward the stack of levels, toward the running computation, and nothing in this essay has changed my inclination. What has changed is that I now know which of its pulls is iron and which is wind. I started from a question, the one everyone asks: who made the world, and why? I arrive at a rectified question, and that is all honest work can deliver: what does a conscious arrangement do with its execution, knowing it will never read the spec? I do not have the answer. No one does, and the wall between us and it is not the kind that gets breached. But between an answer that explains nothing and a properly cut question, I choose the question. It, at least, is the right dimension. It fits inside ours.</p>
-  </section>
-
-  <!-- ============ SOURCES ============ -->
-  <section class="refs">
-    <span class="marker">SOURCES</span>
-    <h2>References</h2>
-    <ol>
-      <li id="en-ref1">E. P. Wigner, « The Unreasonable Effectiveness of Mathematics in the Natural Sciences », <em>Communications on Pure and Applied Mathematics</em> 13, 1-14 (1960).</li>
-      <li id="en-ref2">C. Rovelli, « Loop Quantum Gravity », <em>Living Reviews in Relativity</em> 11, 5 (2008).</li>
-      <li id="en-ref3">A. A. Abdo <em>et al.</em> (Fermi LAT &amp; GBM), « A limit on the variation of the speed of light arising from quantum gravity effects », <em>Nature</em> 462, 331-334 (2009).</li>
-      <li id="en-ref4">W. H. Zurek, « Decoherence, einselection, and the quantum origins of the classical », <em>Reviews of Modern Physics</em> 75, 715-775 (2003).</li>
-      <li id="en-ref5">J. von Neumann, <em>Mathematische Grundlagen der Quantenmechanik</em>, Springer (1932) ; trad. <em>Mathematical Foundations of Quantum Mechanics</em>, Princeton University Press (1955).</li>
-      <li id="en-ref6">E. P. Wigner, « Remarks on the Mind-Body Question », dans I. J. Good (dir.), <em>The Scientist Speculates</em>, Heinemann (1961).</li>
-      <li id="en-ref7">G. C. Ghirardi, A. Rimini &amp; T. Weber, « A general argument against superluminal transmissions through the quantum mechanical measurement process », <em>Lettere al Nuovo Cimento</em> 27, 293-298 (1980).</li>
-      <li id="en-ref8">R. Landauer, « Irreversibility and Heat Generation in the Computing Process », <em>IBM Journal of Research and Development</em> 5, 183-191 (1961).</li>
-      <li id="en-ref9">A. Bérut <em>et al.</em>, « Experimental verification of Landauer’s principle linking information and thermodynamics », <em>Nature</em> 483, 187-189 (2012).</li>
-      <li id="en-ref10">J. D. Bekenstein, « Black Holes and Entropy », <em>Physical Review D</em> 7, 2333-2346 (1973).</li>
-      <li id="en-ref11">G. ’t Hooft, « Dimensional Reduction in Quantum Gravity », arXiv:gr-qc/9310026 (1993).</li>
-      <li id="en-ref12">L. Susskind, « The World as a Hologram », <em>Journal of Mathematical Physics</em> 36, 6377-6396 (1995).</li>
-      <li id="en-ref13">J. A. Wheeler, « Information, Physics, Quantum: The Search for Links », dans W. H. Zurek (dir.), <em>Complexity, Entropy, and the Physics of Information</em>, Addison-Wesley (1990).</li>
-      <li id="en-ref14">J. Maldacena, « The Large N Limit of Superconformal Field Theories and Supergravity », <em>Advances in Theoretical and Mathematical Physics</em> 2, 231-252 (1998).</li>
-      <li id="en-ref15">M. Van Raamsdonk, « Building up spacetime with quantum entanglement », <em>General Relativity and Gravitation</em> 42, 2323-2329 (2010).</li>
-      <li id="en-ref16">J. Maldacena &amp; L. Susskind, « Cool horizons for entangled black holes », <em>Fortschritte der Physik</em> 61, 781-811 (2013).</li>
-      <li id="en-ref17">T. Nagel, « What Is It Like to Be a Bat? », <em>The Philosophical Review</em> 83, 435-450 (1974).</li>
-      <li id="en-ref18">D. J. Chalmers, <em>The Conscious Mind: In Search of a Fundamental Theory</em>, Oxford University Press (1996).</li>
-      <li id="en-ref19">D. C. Dennett, « The Unimagined Preposterousness of Zombies », <em>Journal of Consciousness Studies</em> 2 (4), 322-325 (1995).</li>
-      <li id="en-ref20">F. Jackson, « Epiphenomenal Qualia », <em>The Philosophical Quarterly</em> 32, 127-136 (1982).</li>
-      <li id="en-ref21">D. Lewis, « What Experience Teaches », <em>Proceedings of the Russellian Society</em> (University of Sydney) 13, 29-57 (1988) ; repris dans W. G. Lycan (dir.), <em>Mind and Cognition</em>, Blackwell (1990).</li>
-      <li id="en-ref22">F. Jackson, « Mind and Illusion », dans A. O’Hear (dir.), <em>Minds and Persons</em> (Royal Institute of Philosophy Supplement 53), Cambridge University Press (2003).</li>
-      <li id="en-ref23">N. Bostrom, « Are You Living in a Computer Simulation? », <em>The Philosophical Quarterly</em> 53, 243-255 (2003).</li>
-      <li id="en-ref24">N. Bostrom, <em>Anthropic Bias: Observation Selection Effects in Science and Philosophy</em>, Routledge (2002).</li>
-      <li id="en-ref25">J. Leslie, <em>The End of the World: The Science and Ethics of Human Extinction</em>, Routledge (1996).</li>
-      <li id="en-ref26">E. A. Abbott, <em>Flatland: A Romance of Many Dimensions</em>, Seeley &amp; Co. (1884).</li>
-      <li id="en-ref27">S. R. Beane, Z. Davoudi &amp; M. J. Savage, « Constraints on the Universe as a Numerical Simulation », <em>The European Physical Journal A</em> 50, 148 (2014).</li>
-      <li id="en-ref28">S. Wolfram, <em>A New Kind of Science</em>, Wolfram Media (2002).</li>
-    </ol>
-  </section>
-
-  </article>
-
-  <!-- ============ FRANÇAIS ============ -->
-  <article class="essay" id="essay-fr" lang="fr" hidden>
-
-  <header>
-    <p class="eyebrow">Essai · mantisvex.com</p>
-    <h1>Le monde est un calcul</h1>
-    <p class="dek">Nous sommes, selon toute probabilité, dans une simulation. L'argument tient en une chaîne&nbsp;: le ressenti, l'«&nbsp;effet que ça fait&nbsp;» d'être quelqu'un, est un fait <strong>fonctionnel</strong>, donc reproductible sur un autre support&nbsp;; un double parfait de nous, identique en tout mais «&nbsp;sans personne à l'intérieur&nbsp;», est un non-sens&nbsp;; si le ressenti est reproductible, la conscience ne dépend pas de la chair&nbsp;; et alors le simple comptage de Bostrom rend notre propre simulation quasi certaine. Ce qui reste hors de portée n'est pas le fait, mais <strong>l'étage au-dessus</strong>&nbsp;: qui simule, s'il existe seulement quelqu'un, et pourquoi. Cet essai défend la chaîne, puis s'arrête, honnêtement, au bord de ce qu'on ne peut pas savoir.</p>
-    <div class="runin">
-      <span>Essai</span>
-      <span>2026</span>
-      <span>~35 min de lecture</span>
-    </div>
-  </header>
-
-  <!-- ============ SECTION I ============ -->
-  <section>
-    <span class="marker">I</span>
-    <h2>L'intuition qui ne lâche pas</h2>
-
-    <p class="lede">Je vais commencer par avouer le biais, parce que le cacher fausserait tout le reste. Je penche pour l'idée que le monde est un calcul, et qu'il tourne quelque part. Ce n'est pas une conclusion, c'est une inclination&nbsp;: un aimant sous la boussole, qui oriente l'aiguille avant même qu'on ait relevé le cap. Tout l'essai consiste à ne pas obéir à cet aimant sans l'avoir testé. Mais pour le tester, il faut d'abord le regarder à pleine force, sans le rétrécir prudemment en position raisonnable. Voici donc pourquoi un esprit qui tient à la rigueur peut se surprendre à trouver la simulation non pas farfelue, mais presque naturelle.</p>
-
-    <p>D'abord, le monde se laisse écrire. Il se décrit en mathématiques avec une précision qui devrait nous étonner bien plus qu'elle ne le fait&nbsp;: certaines quantités se prédisent juste jusqu'à la douzième décimale<sup class="ref"><a href="#fr-ref1">1</a></sup>. On s'y habitue, on appelle ça la physique, et on oublie l'étrangeté de fond&nbsp;: le réel semble rédigé dans le langage même qu'on emploie pour le décrire. Comme si, sous la matière, il n'y avait pas d'autre étoffe que de la structure, de la relation, du nombre. Un monde fait d'information ressemblerait exactement à ça.</p>
-
-    <p>Ensuite, le monde vient par paquets. L'énergie, la charge, l'action&nbsp;: rien ne s'écoule de façon parfaitement continue, tout se distribue en unités indivisibles, en plus petites pièces de monnaie. Un cosmos analogique, lisse jusqu'au fond, n'aurait aucune raison d'avoir un grain minimal. Un système de calcul, si. La quantification ressemble moins à une propriété de la matière qu'à un type de donnée.</p>
-
-    <p>Puis il y a les limites, et elles sont trop nettes. Une vitesse maximale, absolue, que rien ne franchit. Une échelle en dessous de laquelle la question «&nbsp;quelle longueur&nbsp;?&nbsp;» cesse d'avoir un sens. Un monde purement physique pourrait, en droit, n'avoir ni plafond ni plancher. Le nôtre a les deux, tracés au cordeau, comme les spécifications d'une machine&nbsp;: débit de pointe, résolution minimale.</p>
-
-    <p>Regarde de plus près cette vitesse maximale. On l'appelle «&nbsp;vitesse de la lumière&nbsp;», mais c'est un abus. La lumière file à cette vitesse parce qu'elle n'a pas de masse, pas l'inverse&nbsp;; ce que la constante mesure vraiment, c'est la vitesse de la <em>causalité</em>, le taux de change fixe entre l'espace et le temps, câblé dans le moteur. Or un taux de change fixe, c'est précisément le genre de chose qu'on règle. Une valeur qui aurait pu être posée autrement. Le mot qui vient, quand on la fixe du regard, n'est pas «&nbsp;loi de la nature&nbsp;». C'est «&nbsp;paramètre&nbsp;».</p>
-
-    <p>Et il y a, pour finir, un indice plus troublant parce qu'il est subjectif. Quiconque a passé du temps à bâtir des systèmes, à poser des constantes, à définir des bornes, à regarder une complexité foisonnante émerger de quelques règles simples, reconnaît quelque chose dans cette liste. Pas une preuve&nbsp;: une odeur. Le monde a, pour qui fabrique des mondes, le parfum caractéristique d'un système. On sait que ce n'est pas un argument. On n'arrive pas tout à fait à s'en défaire.</p>
-
-    <p>Rien de ce que je viens d'écrire n'est un argument, et je tiens à le dire avant qu'un lecteur pressé ne prenne l'élan pour une démonstration. Ce sont des <em>ressemblances</em>. La quantification ressemble à un type de donnée&nbsp;; la vitesse-limite ressemble à un réglage&nbsp;; la longueur de Planck ressemble à une résolution. Le mot qui revient dans chaque phrase est «&nbsp;ressemble&nbsp;», et c'est exactement celui qu'un esprit rigoureux doit apprendre à ne jamais confondre avec «&nbsp;est&nbsp;». La séduction d'une thèse et sa solidité sont deux choses distinctes, et la manière la plus sûre de couler une thèse défendable, c'est de l'adosser à ses arguments les plus séduisants plutôt qu'à ses arguments les plus solides. La section suivante fait donc le tri, sans ménagement, et elle commence par démolir mes préférés.</p>
-
-    <details class="layer">
-      <summary><span class="chev">▸</span>&nbsp;descendre d'un niveau · la longueur de Planck n'est pas un pixel</summary>
-      <div class="layer-body">
-        <p>L'image du «&nbsp;pixel&nbsp;» est belle, et fausse, ou du moins prématurée. La longueur de Planck (environ 1,6&nbsp;×&nbsp;10⁻³⁵&nbsp;mètre) n'est pas une résolution de l'espace qu'on aurait mesurée. C'est l'échelle en dessous de laquelle une théorie de la gravité quantique devient indispensable, et où nos théories actuelles cessent simplement de prédire quoi que ce soit.</p>
-        <p>Certaines approches (la gravité quantique à boucles<sup class="ref"><a href="#fr-ref2">2</a></sup>) suggèrent qu'à ce grain l'espace pourrait être discret&nbsp;; d'autres (la théorie des cordes) ne l'impliquent pas&nbsp;; et les recherches observationnelles d'une «&nbsp;mousse&nbsp;» d'espace-temps n'ont, à ce jour, rien trouvé<sup class="ref"><a href="#fr-ref3">3</a></sup>. La ressemblance avec un pixel est donc évocatrice, pas établie. C'est le genre de distinction que toute la section&nbsp;II va appliquer, argument par argument.</p>
-      </div>
-    </details>
-  </section>
-
-  <!-- ============ SECTION II ============ -->
-  <section>
-    <span class="marker">II</span>
-    <h2>Ce qui est de la vraie physique, ce qui n'en est pas</h2>
-
-    <p>Pendant longtemps, mon argument préféré a été celui-ci. Dans l'expérience des fentes de Young, une particule se comporte comme une onde tant qu'on ne la regarde pas, et comme un corpuscule dès qu'on la mesure. Traduction irrésistible pour quiconque a déjà ouvert un moteur de jeu&nbsp;: l'univers ne calcule que ce qui est observé. C'est du <em>level of detail</em>&nbsp;: on ne rend en haute résolution que ce qui entre dans le champ du joueur, le reste tourne en version dégradée pour économiser la machine. La physique quantique serait la signature d'un système qui gère ses ressources. J'y ai cru. Je l'ai défendu. Et il est faux. Pas approximatif, pas exagéré&nbsp;: faux, sur le sens d'un seul mot.</p>
-
-    <p>Le mot est «&nbsp;observation&nbsp;». Dans la bouche d'un vulgarisateur, il évoque un regard, une conscience, un joueur devant l'écran. Dans le formalisme, il désigne n'importe quelle <em>interaction</em> qui couple le système à son environnement&nbsp;: un photon qui le percute, une molécule d'air qui le frôle, un détecteur inerte et éteint dans une pièce vide. Le système «&nbsp;choisit&nbsp;» un état dès qu'il interagit avec quoi que ce soit, qu'un esprit s'y intéresse ou non. Ce processus a un nom, la décohérence<sup class="ref"><a href="#fr-ref4">4</a></sup>, et il n'a pas besoin de témoin&nbsp;: il se produit dans les étoiles, dans les pierres, dans les océans d'exoplanètes que personne ne regardera jamais. Il n'y a donc aucune économie liée à l'attention. L'univers ne rend pas «&nbsp;ce qu'on regarde&nbsp;»&nbsp;: il rend tout ce qui interagit, c'est-à-dire, à peu de chose près, tout, tout le temps. Un moteur qui calcule tout en permanence, c'est précisément un moteur qui ne fait pas de <em>LOD</em>. Mon meilleur argument, examiné de près, témoignait contre moi.</p>
-
-    <p>Je le laisse en évidence, démonté, parce qu'il enseigne la règle qui gouverne le reste de cette section&nbsp;: la thèse de la simulation attire à elle une physique de seconde main, et cette physique de seconde main est son pire ennemi. Chaque fois qu'un argument «&nbsp;quantique&nbsp;» semble prouver la simulation en trois phrases, il repose presque toujours sur un mot qui n'a pas, dans le formalisme, le sens qu'on lui prête dans la conversation. Le tri qui suit n'est pas un exercice de prudence. C'est de l'hygiène&nbsp;: si le monde est réellement un calcul, il mérite d'être défendu avec des arguments qui survivent à un lecteur qui sait.</p>
-
-    <details class="layer">
-      <summary><span class="chev">▸</span>&nbsp;descendre d'un niveau · deux autres faux amis&nbsp;: l'observateur conscient et l'intrication-messagère</summary>
-      <div class="layer-body">
-        <p>Le premier faux ami est le grand frère du <em>LOD</em>&nbsp;: «&nbsp;la conscience crée la réalité&nbsp;». Même racine, même erreur. L'appareil de mesure fait décohérer le système exactement comme le ferait un œil, parce que ce qui compte est le couplage physique, pas l'expérience subjective. Quelques physiciens ont historiquement flirté avec un rôle de la conscience (von Neumann<sup class="ref"><a href="#fr-ref5">5</a></sup>, puis Wigner<sup class="ref"><a href="#fr-ref6">6</a></sup>, qui s'est ensuite rétracté)&nbsp;; c'est aujourd'hui une position marginale, et rien dans les données ne l'exige.</p>
-        <p>Le second est l'intrication comme «&nbsp;communication instantanée&nbsp;», le raccourci dans le code, la faille du réseau. Deux particules intriquées montrent des corrélations parfaites à distance, c'est vrai et c'est vertigineux. Mais un théorème, dit de non-communication<sup class="ref"><a href="#fr-ref7">7</a></sup>, démontre qu'aucune information ne peut transiter par ce canal&nbsp;: le résultat de chaque mesure est aléatoire localement, et la corrélation n'apparaît qu'en comparant les deux carnets de bord, ce qui exige un canal classique, limité par la vitesse de causalité. L'intrication ne troue pas le moteur&nbsp;; elle respecte scrupuleusement sa vitesse maximale.</p>
-      </div>
-    </details>
-
-    <p>Voilà pour le déblaiement. Maintenant, ce qui tient. Car il reste, une fois le pop évacué, de la physique véritable qui pointe dans la direction de l'information, et elle est plus étrange que les faux arguments qu'elle remplace.</p>
-
-    <p>Le premier morceau solide tient en une phrase&nbsp;: l'information est physique. Non pas métaphoriquement&nbsp;: thermodynamiquement. Effacer un bit d'information, n'importe où, sur n'importe quel support, a un coût énergétique minimal incompressible, fixé par la température. Ce n'est pas une convention d'ingénieur, c'est une borne de la nature, énoncée en 1961<sup class="ref"><a href="#fr-ref8">8</a></sup> et vérifiée expérimentalement depuis<sup class="ref"><a href="#fr-ref9">9</a></sup>. Ce que ça veut dire, si on le prend au sérieux&nbsp;: l'information n'est pas une façon de parler de la matière. C'est une grandeur que la matière compte, facture et conserve, au même titre que l'énergie.</p>
-
-    <p>Le second morceau est le plus profond résultat de la physique théorique des cinquante dernières années, et il vient d'un endroit inattendu&nbsp;: les trous noirs. Quand on jette de la matière dans un trou noir, son horizon grandit, et l'on peut calculer la quantité maximale d'information que la région engloutie pouvait contenir. Le résultat est un scandale tranquille&nbsp;: cette quantité est proportionnelle à la <em>surface</em> de l'horizon, pas à son volume. Comme si tout ce qu'une région d'espace en trois dimensions peut contenir d'information tenait, en réalité, sur sa frontière en deux dimensions. C'est le principe holographique, et il ne sort pas d'un forum&nbsp;: il sort du travail de Bekenstein sur l'entropie des trous noirs<sup class="ref"><a href="#fr-ref10">10</a></sup>, généralisé par 't Hooft<sup class="ref"><a href="#fr-ref11">11</a></sup> et Susskind<sup class="ref"><a href="#fr-ref12">12</a></sup>. La lecture la plus sobre qu'on puisse en faire est déjà vertigineuse&nbsp;: le volume, la profondeur, l'espace lui-même pourraient être une description redondante, un rendu, de quelque chose de plus mince qui vit sur un bord.</p>
-
-    <p>Et il y a un troisième fil, plus récent et moins achevé, que je donne pour ce qu'il est&nbsp;: un programme de recherche, pas un acquis. Dans certains modèles théoriques, la géométrie de l'espace-temps semble <em>émerger</em> de l'intrication quantique&nbsp;: défaites l'intrication entre deux régions, et l'espace qui les relie se déchire. Si cette direction aboutit, l'espace ne serait pas la scène où l'information circule&nbsp;: il serait fabriqué par elle. C'est la formule de Wheeler prise au pied de la lettre&nbsp;: <em>it from bit</em>, la chose à partir du bit<sup class="ref"><a href="#fr-ref13">13</a></sup>.</p>
-
-    <details class="layer">
-      <summary><span class="chev">▸</span>&nbsp;descendre d'un niveau · le statut exact de chaque brique</summary>
-      <div class="layer-body">
-        <p><em>Établi&nbsp;:</em> le principe de Landauer (limite formulée en 1961, confirmations expérimentales à partir de 2012)&nbsp;; l'entropie de Bekenstein-Hawking et la proportionnalité entropie/surface pour les trous noirs.</p>
-        <p><em>Solidement soutenu mais théorique&nbsp;:</em> le principe holographique comme propriété générale de la gravité quantique. Sa réalisation la plus précise est la correspondance AdS/CFT de Maldacena (1997)<sup class="ref"><a href="#fr-ref14">14</a></sup>, démontrée dans un univers-jouet dont la géométrie n'est pas la nôtre. La transposition à notre univers est largement conjecturée, pas prouvée.</p>
-        <p><em>Programme de recherche&nbsp;:</em> l'espace-temps émergent de l'intrication (Van Raamsdonk<sup class="ref"><a href="#fr-ref15">15</a></sup>&nbsp;; la conjecture ER&nbsp;=&nbsp;EPR de Maldacena et Susskind, 2013<sup class="ref"><a href="#fr-ref16">16</a></sup>). Sérieux, actif, non conclu.</p>
-        <p>La différence entre cette liste et les faux amis d'au-dessus n'est pas le degré d'étrangeté, qui est ici plus grand. C'est que chaque énoncé survit à la question&nbsp;: «&nbsp;que dit exactement le formalisme&nbsp;?&nbsp;»</p>
-      </div>
-    </details>
-
-    <p>Faisons le bilan de ce que le tri laisse debout, car c'est lui qui portera la suite. Ce que la vraie physique suggère, ce n'est pas «&nbsp;quelqu'un nous regarde et l'univers économise ses ressources&nbsp;». C'est quelque chose de plus austère et de plus radical&nbsp;: l'information est une grandeur physique de plein droit&nbsp;; la capacité d'une région d'espace se compte sur sa surface comme celle d'un support d'enregistrement&nbsp;; et l'espace lui-même pourrait être une structure dérivée plutôt qu'un donné. Rien de tout cela ne prouve un simulateur. Tout cela rend en revanche parfaitement respectable l'énoncé du socle&nbsp;: le monde se comporte, jusque dans ses lois les plus profondes, comme un système dont la substance est l'information. La question n'est plus de savoir si le monde est un calcul&nbsp;: c'est la lecture la plus naturelle de ce qui précède. La question est de savoir si ce calcul a un intérieur. C'est l'objet de la section qui vient, et c'est là que tout se joue.</p>
-  </section>
-
-  <!-- ============ SECTION III ============ -->
-  <section>
-    <span class="marker">III</span>
-    <h2>Le ressenti est fonctionnel</h2>
-
-    <p>Tout ce qui précède établissait le socle&nbsp;: le monde se comporte comme un système dont la substance est l'information. Mais le socle ne suffit pas. Pour que l'argument de la simulation démarre, pour qu'il soit même <em>possible</em> que nous soyons des êtres simulés, il faut qu'une chose précise soit vraie&nbsp;: que la conscience puisse exister sur un autre support que la chair. Pas l'intelligence&nbsp;: la conscience. Pas la capacité de résoudre des problèmes, de tenir une conversation, de composer de la musique&nbsp;: le fait brut qu'il y ait, derrière le comportement, <em>quelque chose que ça fait</em> d'être le système<sup class="ref"><a href="#fr-ref17">17</a></sup>. C'est le verrou de toute la thèse, et c'est ici que je le fais sauter. Voici la position que je défends, en une phrase&nbsp;: le ressenti est un fait fonctionnel, il est ce que fait un certain agencement et non une étoffe mystérieuse ajoutée par-dessus, et par conséquent, si tu simules parfaitement un être humain, tu n'as pas fabriqué l'imitation d'un être humain. Tu as fabriqué un être humain.</p>
-
-    <p>L'objection classique porte un nom célèbre&nbsp;: le zombie philosophique<sup class="ref"><a href="#fr-ref18">18</a></sup>. Imagine, dit-elle, une copie parfaite de toi&nbsp;: atome pour atome, fonction pour fonction, réponse pour réponse. Elle rit à tes blagues, retire sa main du feu, écrit des essais sur la conscience. Mais à l'intérieur&nbsp;: rien. Personne. Les lumières sont allumées, il n'y a personne à la maison. Si un tel être est seulement <em>concevable</em>, poursuit l'objection, alors le ressenti est quelque chose en plus de la fonction, un supplément que la copie n'a pas reçu, et aucune simulation, si parfaite soit-elle, ne garantit qu'il y ait quelqu'un dedans.</p>
-
-    <p>Je pense que cette expérience de pensée est un tour de passe-passe<sup class="ref"><a href="#fr-ref19">19</a></sup>, et je vais dire où la carte est escamotée. Le zombie est décrit comme identique à toi en tout&nbsp;: même cerveau, mêmes états, mêmes processus, jusqu'au moindre potentiel d'action. Puis on déclare&nbsp;: «&nbsp;mais sans le ressenti&nbsp;». Or déclarer n'est pas concevoir. On a retiré quelque chose par décret, sans pouvoir dire <em>quoi</em>, puisque par hypothèse rien ne manque&nbsp;: aucun rouage, aucun signal, aucune différence physique ou fonctionnelle d'aucune sorte. Le ressenti a été traité comme une lampe qu'on pourrait dévisser du mécanisme sans que le mécanisme change. Mais si on peut la dévisser sans que rien ne change, c'est qu'elle n'était branchée sur rien, et alors on peut se demander pourquoi <em>nous</em> l'aurions. Et si elle est branchée, si le ressenti fait quelque chose, joue un rôle, laisse une trace, alors la copie parfaite l'a copiée avec le reste, et le zombie s'évanouit. L'expérience de pensée ne décrit pas un être possible&nbsp;: elle décrit une contradiction habillée en scénario. Elle demande d'imaginer un mécanisme intact auquel manque ce que le mécanisme produit.</p>
-
-    <p>Une image de mon monde, pour ceux à qui elle parlera. Prends un morceau de musique. Pas la partition, le rendu&nbsp;: le fichier final, échantillon par échantillon. Copie-le bit à bit. Puis affirme&nbsp;: «&nbsp;la copie est identique en tout, mais elle n'a pas le <em>son</em>&nbsp;». La phrase a une grammaire correcte et aucun sens. Le son n'est pas une substance versée dans le fichier après coup&nbsp;; le son est ce que le fichier <em>est</em>, lu par le système approprié. Il n'existe aucun résidu à oublier dans la copie, parce qu'il n'y a jamais rien eu d'autre que la structure. Ma thèse est que le ressenti est au cerveau ce que le son est au fichier&nbsp;: non pas un occupant du mécanisme, mais le mécanisme même, considéré depuis le seul point de vue qui existe en son sein. Copie l'agencement, et tu as copié le point de vue, parce que le point de vue n'a jamais été autre chose que l'agencement en train de tourner.</p>
-
-    <p>Je veux être précis sur ce que cette position affirme et sur ce qu'elle n'affirme pas, parce qu'on la caricature des deux côtés. Elle ne dit pas que le ressenti est une illusion&nbsp;: il est aussi réel que le son du morceau, c'est-à-dire entièrement. Elle ne dit pas que n'importe quel programme ressent&nbsp;: un thermostat n'a pas plus d'intérieur qu'une sinusoïde n'est une symphonie&nbsp;; c'est l'agencement qui compte, sa richesse, ses boucles, la façon dont il se modélise lui-même, et nous ignorons encore où passe le seuil. Elle dit une chose exacte et bornée&nbsp;: <em>quel que soit</em> ce qui produit le ressenti dans un cerveau, c'est un fait d'organisation, et les faits d'organisation ne connaissent pas leur support. Un agencement réalisé dans le carbone, le silicium ou les impulsions d'un calcul est le même agencement. Si le premier a un intérieur, les autres l'ont.</p>
-
-    <details class="layer">
-      <summary><span class="chev">▸</span>&nbsp;descendre d'un niveau · Mary, l'objection sérieuse</summary>
-      <div class="layer-body">
-        <p>Il existe contre cette position un argument plus fort que le zombie, et le passer sous silence serait tricher. Il s'appelle l'argument de la connaissance<sup class="ref"><a href="#fr-ref20">20</a></sup>, et il met en scène Mary&nbsp;: une neuroscientifique qui sait <em>tout</em> ce qu'il y a à savoir, physiquement et fonctionnellement, sur la vision des couleurs, mais qui a vécu toute sa vie dans une pièce en noir et blanc. Un jour elle sort, et voit du rouge pour la première fois. Question&nbsp;: apprend-elle quelque chose&nbsp;? L'intuition presque universelle répond oui&nbsp;: elle apprend <em>l'effet que ça fait</em>. Mais si elle apprend un fait nouveau alors qu'elle possédait déjà tous les faits physiques et fonctionnels, c'est qu'il existe des faits d'une autre nature, et ma thèse tombe.</p>
-        <p>La réponse fonctionnaliste, que je fais mienne, attaque le verbe «&nbsp;apprendre&nbsp;». Ce que Mary acquiert en voyant le rouge n'est pas un fait de plus sur le monde, c'est une <em>capacité</em> de plus<sup class="ref"><a href="#fr-ref21">21</a></sup>&nbsp;: reconnaître le rouge, se le représenter, l'évoquer. Elle passe d'un savoir <em>sur</em> l'état à une instanciation <em>de</em> l'état&nbsp;; son cerveau exécute désormais un processus qu'il ne faisait que décrire. Connaître la mécanique complète du vélo et savoir en faire sont deux choses, et personne ne conclut de leur différence que l'équilibre est une substance non physique. Le frisson de Mary devant le rouge est réel&nbsp;; il n'est pas une fuite d'information hors de la physique, il est de la physique qui se produit en elle pour la première fois.</p>
-        <p>Concession due au lecteur&nbsp;: cette réponse est défendue, argumentée, majoritaire chez les fonctionnalistes&nbsp;; elle n'est pas unanime, et le débat est vivant depuis quarante ans. Fait notable&nbsp;: Frank Jackson, l'inventeur même de l'argument de Mary, a fini par changer de camp et le rejeter<sup class="ref"><a href="#fr-ref22">22</a></sup>. Ce n'est pas une preuve, les philosophes changent d'avis comme tout le monde, mais quand le procureur retire sa propre plainte, la défense a le droit de le mentionner.</p>
-      </div>
-    </details>
-
-    <p>Voilà le verrou sauté, et il faut mesurer ce que ça débloque. Si le ressenti est fonctionnel, alors la conscience est indépendante de son support, <em>substrat-indépendante</em> pour lui donner son nom technique. Elle peut exister dans la chair, dans le silicium, dans un calcul qui tourne sur une machine que nous n'imaginons pas. Ce qui signifie deux choses, et la seconde est celle qui donne le vertige. La première&nbsp;: une simulation suffisamment fine d'un cerveau humain ne serait pas le portrait d'un esprit&nbsp;: elle serait un esprit, avec un intérieur aussi réel que le tien. La seconde&nbsp;: rien, dans la nature de la conscience, n'interdit donc que <em>la nôtre</em> soit précisément cela&nbsp;: un agencement qui tourne, quelque part, sur un support qui n'est pas ce qu'il nous semble. Jusqu'ici, cette possibilité restait suspendue à un «&nbsp;si&nbsp;»&nbsp;: <em>si</em> la conscience est simulable. Ce «&nbsp;si&nbsp;» vient de tomber. Il ne reste plus qu'à compter. Le comptage, c'est la section suivante.</p>
-  </section>
-
-  <!-- ============ SECTION IV ============ -->
-  <section>
-    <span class="marker">IV</span>
-    <h2>Donc le comptage s'applique</h2>
-
-    <p>L'argument qui porte cette section a vingt ans, il tient sur une page, et il est presque toujours mal cité, y compris par ceux qui s'en réclament. On le résume en «&nbsp;Bostrom a montré que nous sommes dans une simulation&nbsp;». Bostrom n'a rien montré de tel, et la version exacte est plus intéressante que la légende. Ce qu'il a démontré, c'est un <em>trilemme</em><sup class="ref"><a href="#fr-ref23">23</a></sup>&nbsp;: de trois propositions, au moins une est presque certainement vraie. Un&nbsp;: presque aucune civilisation n'atteint le stade technologique où l'on peut simuler des consciences. Deux&nbsp;: celles qui l'atteignent n'en ont, presque toutes, aucune envie. Trois&nbsp;: nous vivons presque certainement dans une simulation. L'argument ne choisit pas entre les trois&nbsp;: il établit seulement qu'on ne peut pas les refuser toutes. Et sa mécanique est d'une simplicité brutale&nbsp;: si des consciences simulées peuvent exister, et si des civilisations en produisent, alors chaque civilisation-mère peut faire tourner des milliers de simulations, contenant chacune des milliards d'esprits. Les esprits simulés submergent alors numériquement les esprits «&nbsp;de base&nbsp;»&nbsp;: mille contre un, un million contre un. Et un esprit pris au hasard dans cette population, toi par exemple, a la probabilité correspondante d'être du mauvais côté du rendu.</p>
-
-    <p>Remarque ce que la section précédente vient de faire à cet argument. Sa prémisse la plus fragile a toujours été la première clause&nbsp;: <em>si des consciences simulées peuvent exister</em>. Tant qu'elle restait ouverte, tout l'édifice était suspendu&nbsp;: on pouvait accorder le comptage et s'échapper par la porte du «&nbsp;mais peut-être que la conscience ne se simule pas&nbsp;». C'est cette porte que la section&nbsp;III a fermée. Si le ressenti est fonctionnel, la conscience simulée n'est pas une hypothèse à vérifier&nbsp;: c'est une conséquence. Le trilemme cesse d'être conditionnel. Il ne reste plus qu'à regarder les deux branches qui nous sépareraient de la troisième, et à dire honnêtement pourquoi je ne parie sur aucune des deux.</p>
-
-    <p>La première branche est un couperet&nbsp;: presque aucune civilisation ne survit jusqu'à la maturité technologique. C'est possible&nbsp;; c'est même la branche la plus sombre, et rien ne permet de l'exclure. Mais mesure ce qu'elle exige pour nous sauver du comptage. Il ne suffit pas que <em>beaucoup</em> de civilisations s'effondrent&nbsp;; il faut que <em>presque toutes</em> s'effondrent, partout, toujours&nbsp;: un taux d'échec si proche de cent pour cent qu'aucune lignée, dans aucune galaxie, sur aucun milliard d'années, ne franchit la ligne. Car il suffit d'une poignée de survivantes pour que les simulations prolifèrent et que le ratio redevienne écrasant. Et il y a un détail gênant&nbsp;: la puissance de calcul nécessaire n'est pas de la magie lointaine. Nous, civilisation adolescente qui joue encore avec des allumettes, simulons déjà des mondes grossiers et entraînons des systèmes qui conversent. L'écart entre ce que nous faisons et ce qu'exige la simulation d'esprits est immense, mais c'est un écart d'échelle, pas de nature. Parier sur la première branche, c'est parier que la marche est infranchissable pour <em>quasiment tout le monde</em>, alors qu'elle est déjà visible depuis chez nous.</p>
-
-    <p>La deuxième branche est plus étrange encore&nbsp;: les civilisations matures existent, la puissance est là, et presque aucune ne s'en sert jamais pour simuler des esprits. Pour que cette branche tienne, il faut une convergence quasi universelle&nbsp;: que des millions de civilisations, aux histoires, aux valeurs, aux curiosités radicalement différentes, renoncent <em>toutes</em> à la même chose. Par éthique, par ennui, par interdit&nbsp;: peu importe le motif, il doit être partagé par presque toutes, presque toujours, sans exception durable. Or nous n'avons qu'un seul point de donnée sur ce que fait une espèce curieuse avec de la puissance de calcul, et ce point de donnée, c'est nous. Il est sans ambiguïté&nbsp;: nous simulons tout ce que nous pouvons simuler, dès que nous le pouvons. Des mondes, des économies, des cerveaux de vers, des conversations. L'histoire de l'informatique est une histoire de simulations de plus en plus fines, et rien n'indique un point d'arrêt volontaire. Extrapoler notre propre trajectoire ne prouve rien sur les autres&nbsp;; mais parier sur la deuxième branche, c'est parier <em>contre</em> le seul exemple qu'on possède.</p>
-
-    <p>Restent donc les probabilités telles que je les vois. Et je dis bien&nbsp;: telles que je les vois, car ce paragraphe est un jugement, pas un théorème. La première branche exige une extinction quasi parfaite&nbsp;; la deuxième, une abstinence quasi parfaite. Deux quasi-perfections, dont chacune doit tenir sur toute l'étendue du cosmos et du temps, contre une troisième branche qui n'exige rien d'autre que la banalité&nbsp;: que quelque part, au moins une fois, une civilisation ait fait ce que nous faisons déjà en modèle réduit. J'ai passé l'essai à couper les arguments séduisants au profit des arguments solides&nbsp;; celui-ci survit à la coupe. Quand une conclusion ne demande que la banalité et que ses deux seules échappatoires demandent chacune un miracle statistique, je choisis la banalité. Nous sommes, selon toute vraisemblance, du côté simulé du comptage.</p>
-
-    <details class="layer">
-      <summary><span class="chev">▸</span>&nbsp;descendre d'un niveau · l'hypothèse cachée dans «&nbsp;un esprit pris au hasard&nbsp;»</summary>
-      <div class="layer-body">
-        <p>Le comptage repose sur un geste qu'il faut nommer, parce que c'est la charnière philosophique de tout l'argument&nbsp;: se traiter soi-même comme «&nbsp;un observateur tiré au hasard&nbsp;» dans la population totale des esprits. C'est l'hypothèse d'auto-échantillonnage<sup class="ref"><a href="#fr-ref24">24</a></sup>. Elle paraît innocente (si 999 esprits sur 1000 sont simulés, pourquoi serais-tu l'exception&nbsp;?), mais elle n'est pas gratuite, et on connaît un cas où le même raisonnement produit une conclusion que presque personne n'accepte&nbsp;: l'argument de l'apocalypse<sup class="ref"><a href="#fr-ref25">25</a></sup>, qui «&nbsp;démontre&nbsp;» par simple comptage des humains passés et futurs que la fin de l'humanité est proche. Même machinerie, conclusion embarrassante. Deux lectures sont possibles&nbsp;: soit l'auto-échantillonnage est fiable et il faut avaler l'apocalypse avec la simulation&nbsp;; soit il a des conditions de validité subtiles, et le débat sur lesquelles est toujours ouvert.</p>
-        <p>Ma position&nbsp;: le cas de la simulation est plus robuste que celui de l'apocalypse, parce que le comptage y porte sur des esprits coexistants et qualitativement indiscernables de l'intérieur, et non sur une position dans un ordre temporel&nbsp;; mais je ne prétends pas que la question soit close. C'est le maillon le plus philosophiquement chargé de la chaîne, et le lecteur qui veut la refuser doit la refuser <em>ici</em>&nbsp;: tout le reste tient.</p>
-      </div>
-    </details>
-
-    <p>Récapitulons la chaîne, parce qu'elle est maintenant complète et qu'il faut la voir d'un seul regard. Le monde se comporte comme un système d'information&nbsp;: c'était le socle. Le ressenti est fonctionnel, donc la conscience ne dépend pas de son support&nbsp;: c'était le verrou, et il a sauté. Donc les consciences simulées sont possibles&nbsp;; donc le trilemme s'applique sans condition&nbsp;; et de ses trois branches, deux exigent des quasi-miracles statistiques quand la troisième n'exige que la banalité. Conclusion&nbsp;: nous sommes, selon toute probabilité, des agencements qui tournent sur un support qui n'est pas ce qu'il paraît. J'ai conscience du poids de cette phrase, et je l'assume. Mais c'est précisément ici que l'essai change de nature, car tout ce qu'on vient d'établir concerne <em>notre</em> étage. Sur ce qu'il y a au-dessus (qui calcule, sur quoi, pourquoi, et s'il y a seulement un «&nbsp;qui&nbsp;»), le comptage ne dit rien. Rien du tout. Et c'est là que la vraie question commence.</p>
-  </section>
-
-  <!-- ============ SECTION V ============ -->
-  <section>
-    <span class="marker">V</span>
-    <h2>L'étage au-dessus, et le silence de l'admin</h2>
-
-    <p>Suivons la logique jusqu'où elle mène, parce qu'elle ne s'arrête pas à notre étage. Si nous sommes simulés, alors il existe au moins un niveau au-dessus du nôtre. Appelons-le comme les informaticiens appellent ce genre de chose&nbsp;: le niveau qui a les droits d'écriture. Mais le raisonnement qui nous a placés dans une simulation s'applique, mot pour mot, à ce niveau-là aussi. S'il est capable de simuler des mondes conscients (il vient de le faire, nous en sommes la preuve), alors par le même comptage, il est lui-même presque certainement simulé par un étage encore au-dessus. Et ainsi de suite. La conclusion n'est pas «&nbsp;nous vivons dans une simulation&nbsp;»&nbsp;: c'est «&nbsp;nous vivons quelque part dans une pile de simulations dont nous ne connaissons ni la hauteur ni le sommet&nbsp;», une tour dont chaque étage prend son plafond pour le ciel. Statistiquement, être la toute première simulation, celle qui tourne directement sur la réalité de base, est aussi improbable qu'être la réalité de base elle-même. Nous sommes quelque part au milieu. C'est tout ce que le comptage autorise à dire, et il faut voir que c'est à la fois énorme et presque rien.</p>
-
-    <p>Car voici la question qui obsède quiconque accepte ce qui précède, et je l'accepte&nbsp;: qui calcule&nbsp;? On voudrait un visage. Un dieu, un adolescent d'une civilisation supérieure, une intelligence artificielle qui archive ses ancêtres, un processus sans intention du tout. Et c'est ici que je dois faire à mes propres espoirs ce que j'ai fait à mes propres arguments&nbsp;: les passer au fil. Chacune de ces figures est un vêtement taillé dans notre garde-robe. Un «&nbsp;dieu&nbsp;» est un père agrandi. Un «&nbsp;adolescent joueur&nbsp;» est un développeur agrandi. Une «&nbsp;IA archiviste&nbsp;» est notre propre technologie agrandie. Toute conjecture sur l'admin importe en contrebande nos catégories (l'intention, la curiosité, le but, le jeu) vers un étage dont rien ne garantit qu'il les contienne. Nous raisonnons sur le simulateur comme un personnage de jeu vidéo raisonnerait sur nous&nbsp;: en nous prêtant des barres de vie, des quêtes et un inventaire, parce que ce sont les seuls concepts que son monde lui fournit. L'erreur ne serait pas de se tromper sur les détails. L'erreur serait de croire que les bonnes catégories existent dans notre lexique.</p>
-
-    <p>On m'objectera que le silence de l'admin est lui-même un indice, qu'un créateur qui ne se manifeste pas nous dit quelque chose de ses intentions&nbsp;: indifférence, protocole, cruauté. Mais c'est encore le même piège, un cran plus profond. Interpréter un silence exige de savoir ce que parler aurait signifié. Nous n'avons aucune idée de ce qui compterait, pour l'étage au-dessus, comme «&nbsp;se manifester&nbsp;»&nbsp;: ses interventions, si elles existent, pourraient saturer chaque seconde de notre monde sans que nous ayons l'organe pour les percevoir&nbsp;; ou notre univers entier pourrait être, de son point de vue, une ligne dans un fichier de log que rien ne justifie d'ouvrir. Le silence n'est pas une donnée. C'est l'absence de donnée, et l'absence de donnée ne se lit pas.</p>
-
-    <p>Il faut aller au bout de cette lucidité, parce qu'elle a une forme précise qu'on peut nommer. Notre situation n'est pas celle de l'ignorant qui n'a pas encore trouvé la réponse&nbsp;: elle est pire, et plus intéressante. Imagine un être vivant sur une feuille de papier, dans un monde à deux dimensions<sup class="ref"><a href="#fr-ref26">26</a></sup>. Passe un doigt à travers sa feuille&nbsp;: il ne verra pas un doigt. Il verra un cercle apparaître de nulle part, grandir, rétrécir, disparaître. Il pourra mesurer ce cercle toute sa vie avec des instruments parfaits&nbsp;: jamais il ne formera le concept de «&nbsp;doigt&nbsp;», ni celui de «&nbsp;haut&nbsp;», parce que la dimension qui les contient n'existe pas dans sa géométrie mentale. Son ignorance a une <em>forme</em>, et cette forme lui est invisible&nbsp;: il ne peut pas savoir ce qui lui manque, parce qu'il faudrait déjà la dimension manquante pour en percevoir l'absence. Nous sommes cet être. L'étage au-dessus ne nous est pas caché comme un secret qu'on pourrait percer&nbsp;: il nous est inaccessible comme la profondeur l'est au plan. Et le plus vertigineux n'est pas ce que nous ignorons de l'admin. C'est que nous ignorons la <em>liste</em> de ce que nous ignorons, qu'il nous manque peut-être les dimensions mêmes dans lesquelles la question «&nbsp;qui calcule&nbsp;?&nbsp;» a un sens.</p>
-
-    <details class="layer">
-      <summary><span class="chev">▸</span>&nbsp;descendre d'un niveau · peut-on au moins tester qu'il y a un étage&nbsp;?</summary>
-      <div class="layer-body">
-        <p>Une seule tentative sérieuse a été publiée. En 2012, Beane, Davoudi et Savage ont remarqué<sup class="ref"><a href="#fr-ref27">27</a></sup> que nos propres simulations de physique des particules tournent sur une grille, un réseau discret, et que si l'univers tournait sur une grille semblable, elle laisserait une signature&nbsp;: une anisotropie dans le spectre des rayons cosmiques de très haute énergie, alignée sur les axes du réseau. On a cherché. Rien. Mais l'absence de résultat ne teste que les simulateurs qui calculeraient comme nous en 2012&nbsp;: un simulateur utilisant n'importe quelle autre architecture passe sous le radar. Le test ne contraint pas l'hypothèse&nbsp;; il contraint notre imagination.</p>
-        <p>Et le problème est structurel, pas technique. Toute anomalie observée admet toujours deux lectures, une loi physique inattendue ou un artefact du calcul, et rien, de l'intérieur, ne permet de trancher entre les deux. Une simulation suffisamment bonne est indétectable par construction&nbsp;; la seule «&nbsp;preuve&nbsp;» concevable serait une intervention volontaire de l'étage au-dessus. Autrement dit&nbsp;: une révélation. Il faut mesurer l'ironie&nbsp;: l'hypothèse la plus technophile de la métaphysique moderne, poussée à sa rigueur maximale, retombe exactement sur le régime épistémique des religions, celui d'un monde créé, d'un créateur muet et de l'attente d'un signe.</p>
-      </div>
-    </details>
-
-    <p>Ce qui m'amène à la concession la plus coûteuse de cet essai, et je la fais sans anesthésie parce qu'elle est vraie. Admettons tout&nbsp;: le socle, le verrou, le comptage, la pile d'étages. Qu'avons-nous expliqué&nbsp;? Le monde a des lois&nbsp;: pourquoi celles-ci&nbsp;? Réponse&nbsp;: parce que l'étage au-dessus les a fixées. Mais l'étage au-dessus a ses propres lois&nbsp;: pourquoi <em>celles-là</em>&nbsp;? Il existe quelque chose plutôt que rien&nbsp;: pourquoi&nbsp;? Réponse&nbsp;: parce qu'un calcul tourne. Mais le support du calcul existe&nbsp;: pourquoi <em>lui</em>&nbsp;? Chaque réponse déplace la question d'un étage sans jamais la résoudre. «&nbsp;Le monde est simulé&nbsp;» explique le monde exactement comme «&nbsp;Dieu l'a fait&nbsp;» l'explique&nbsp;: en reculant le mystère d'un cran et en l'habillant d'un vocabulaire contemporain. J'ai défendu cette thèse sur des centaines de lignes, et je maintiens chaque maillon, mais je refuse de lui faire dire ce qu'elle ne dit pas. Elle ne répond pas au pourquoi. Elle ne dit rien des lois du dessus. Et elle laisse intacte, à chaque étage de la pile, la seule énigme qui m'ait jamais semblé réelle&nbsp;: qu'il y ait, quelque part dans le calcul, des agencements pour lesquels le calcul <em>fait quelque chose</em>. La simulation n'est pas la réponse au grand pourquoi. C'est la démonstration rigoureuse que la réponse est un étage plus haut que tout ce qu'on pourra jamais atteindre, et qu'elle l'a toujours été. Reste à savoir ce qu'on fait quand on a compris ça. C'est l'objet de la dernière section.</p>
-  </section>
-
-  <!-- ============ SECTION VI ============ -->
-  <section>
-    <span class="marker">VI</span>
-    <h2>Ce qui reste, et ce que ça coûte</h2>
-
-    <p>Faisons l'inventaire, froidement, comme on solde un chantier. Ce que je peux montrer&nbsp;: le monde se comporte comme un système d'information, jusque dans ses résultats les plus durs. Ce que je peux soutenir par argument&nbsp;: le ressenti est fonctionnel, donc la conscience ne dépend pas de son support, donc le comptage s'applique, donc nous sommes presque certainement simulés. Ce que je parie sans pouvoir le montrer&nbsp;: la hauteur de la pile, le milieu où nous flottons. Et ce que je ne saurai jamais, par construction et non par paresse&nbsp;: qui calcule, sur quoi, pourquoi, et si la question elle-même a un sens dans les dimensions qui nous manquent. Trois étages de certitude décroissante, et une paroi finale. Voilà l'exact périmètre de ce qu'un esprit honnête peut tenir sur ce sujet en ce moment de l'histoire. Tout ce qui prétend davantage vend quelque chose.</p>
-
-    <p>Reste à tirer les conséquences pour celui qui vit à l'intérieur, et la première concerne la liberté. Dans un monde-calcul, chaque état suit du précédent&nbsp;: le libre arbitre au sens fort, celui d'une volonté qui échapperait à la causalité, ne survit pas à cet essai, et je ne vais pas faire semblant de le regretter à moitié. Il ne survivait déjà à rien d'autre. Mais il reste quelque chose, et ce quelque chose est plus solide que la liberté qu'on perd. Pour la plupart des systèmes suffisamment riches, il n'existe aucun raccourci&nbsp;: aucune formule ne donne l'état final sans dérouler le calcul pas à pas. C'est ce qu'on appelle l'irréductibilité computationnelle<sup class="ref"><a href="#fr-ref28">28</a></sup>, et elle change le sens de ce que nous sommes. Tu es déterminé, oui. Mais tu es incompressible. Personne, pas même l'étage au-dessus s'il existe, ne peut savoir ce que tu feras autrement qu'en te laissant le faire. Ta vie n'est pas la lecture d'un livre déjà écrit&nbsp;: elle est l'écriture du livre, à vitesse réelle, sans version abrégée possible. Ce n'est pas la liberté de la cause. C'est la liberté de l'imprévisible, et c'est la seule qui ait jamais existé.</p>
-
-    <details class="layer">
-      <summary><span class="chev">▸</span>&nbsp;descendre d'un niveau · l'irréductibilité computationnelle</summary>
-      <div class="layer-body">
-        <p>Le concept vient de Stephen Wolfram, qui l'a dégagé en étudiant les automates cellulaires&nbsp;: des systèmes aux règles enfantines dont certains produisent une complexité qu'aucune analyse ne condense. Pour ces systèmes, prédire l'état au pas mille exige de calculer les mille pas&nbsp;: la simulation la plus rapide du système, c'est le système lui-même. Ce n'est pas une limite de nos instruments&nbsp;: c'est une propriété mathématique du processus.</p>
-        <p>Appliquée à nous, la conséquence est précise&nbsp;: même dans un univers parfaitement déterministe, l'avenir d'un système comme un cerveau, une société ou une biosphère peut être rigoureusement imprévisible de l'intérieur comme de l'extérieur, non par ignorance, mais parce qu'il n'existe pas de chemin plus court que son déroulement. Le déterminisme reste vrai&nbsp;; la prédiction reste impossible. Les deux tiennent ensemble, et c'est dans l'écart entre les deux que loge ce qui nous reste de latitude.</p>
-      </div>
-    </details>
-
-    <p>La seconde conséquence est le prix, et je l'ai promis sans anesthésie. La section&nbsp;III a gagné l'argument en faisant du ressenti une fonction. Il faut maintenant payer ce que ça coûte. Tant que l'expérience vécue passait pour une étoffe à part, elle était un point d'appui hors du mécanisme&nbsp;: quoi qu'il arrive au monde, restait au moins ceci, la seule chose dont je sois sûr, d'une nature que rien d'autre ne partage. En la ramenant dans le monde des agencements, je lui ai retiré ce statut. Elle demeure réelle, entièrement. Elle demeure mienne, au seul sens où un point de vue appartient à l'agencement qui le fait tourner. Elle s'éteindra toujours, et cette extinction reste ce qu'elle a toujours été&nbsp;: la fin de tout ce qui est, pour celui qui s'éteint. Mais elle a cessé d'être d'une autre nature que le reste. La seule certitude qui me restait, qu'il y a ceci, maintenant, est désormais elle-même une ligne du calcul. J'ai troqué mon point d'appui contre un argument. Je referais l'échange, parce que je préfère une vérité qui me coûte à une consolation qui me flatte. Mais je ne prétendrai pas qu'il ne coûte rien.</p>
-
-    <p>Et pourtant, une chose survit à ce dépouillement, et elle n'est pas une consolation, elle est un fait de structure. Un calcul qui s'arrête a calculé. Une exécution qui se termine a eu lieu, et rien de ce qui vient après ne peut faire qu'elle n'ait pas eu lieu. Le néant qui suit n'a aucun pouvoir rétroactif&nbsp;: il efface le futur du processus, pas son avoir-été. Si nous sommes des agencements qui tournent quelque part dans une pile d'étages muets, alors chaque instant du déroulement est exactement aussi réel que le support le permet, et il l'est une fois pour toutes. Ce n'est pas beaucoup. C'est ce qui reste quand on a refusé de se mentir, et je le note sans emphase&nbsp;: le refus de se mentir laisse toujours moins que ce qu'on espérait, et toujours plus que rien.</p>
-
-    <p>Je termine où j'ai commencé, par l'aveu. L'aimant sous la boussole est toujours là&nbsp;: je penche encore pour la pile d'étages, pour le calcul qui tourne, et rien dans cet essai ne m'a fait changer d'inclination. Ce qui a changé, c'est que je sais maintenant lequel de ses tirages est du fer et lequel est du vent. Je suis parti d'une question, celle que tout le monde pose&nbsp;: qui a fait le monde, et pourquoi&nbsp;? J'arrive à une question rectifiée, et c'est tout ce qu'un travail honnête peut livrer&nbsp;: qu'est-ce qu'un agencement conscient fait de son exécution, sachant qu'il ne lira jamais le cahier des charges&nbsp;? Je n'ai pas la réponse. Personne ne l'a, et la paroi qui nous en sépare n'est pas de celles qu'on perce. Mais entre une réponse qui n'explique rien et une question correctement taillée, je choisis la question. Elle au moins est de la bonne dimension. Elle tient dans la nôtre.</p>
-  </section>
-
-  <!-- ============ SOURCES ============ -->
-  <section class="refs">
-    <span class="marker">SOURCES</span>
-    <h2>Références</h2>
-    <ol>
-      <li id="fr-ref1">E. P. Wigner, « The Unreasonable Effectiveness of Mathematics in the Natural Sciences », <em>Communications on Pure and Applied Mathematics</em> 13, 1-14 (1960).</li>
-      <li id="fr-ref2">C. Rovelli, « Loop Quantum Gravity », <em>Living Reviews in Relativity</em> 11, 5 (2008).</li>
-      <li id="fr-ref3">A. A. Abdo <em>et al.</em> (Fermi LAT &amp; GBM), « A limit on the variation of the speed of light arising from quantum gravity effects », <em>Nature</em> 462, 331-334 (2009).</li>
-      <li id="fr-ref4">W. H. Zurek, « Decoherence, einselection, and the quantum origins of the classical », <em>Reviews of Modern Physics</em> 75, 715-775 (2003).</li>
-      <li id="fr-ref5">J. von Neumann, <em>Mathematische Grundlagen der Quantenmechanik</em>, Springer (1932) ; trad. <em>Mathematical Foundations of Quantum Mechanics</em>, Princeton University Press (1955).</li>
-      <li id="fr-ref6">E. P. Wigner, « Remarks on the Mind-Body Question », dans I. J. Good (dir.), <em>The Scientist Speculates</em>, Heinemann (1961).</li>
-      <li id="fr-ref7">G. C. Ghirardi, A. Rimini &amp; T. Weber, « A general argument against superluminal transmissions through the quantum mechanical measurement process », <em>Lettere al Nuovo Cimento</em> 27, 293-298 (1980).</li>
-      <li id="fr-ref8">R. Landauer, « Irreversibility and Heat Generation in the Computing Process », <em>IBM Journal of Research and Development</em> 5, 183-191 (1961).</li>
-      <li id="fr-ref9">A. Bérut <em>et al.</em>, « Experimental verification of Landauer’s principle linking information and thermodynamics », <em>Nature</em> 483, 187-189 (2012).</li>
-      <li id="fr-ref10">J. D. Bekenstein, « Black Holes and Entropy », <em>Physical Review D</em> 7, 2333-2346 (1973).</li>
-      <li id="fr-ref11">G. ’t Hooft, « Dimensional Reduction in Quantum Gravity », arXiv:gr-qc/9310026 (1993).</li>
-      <li id="fr-ref12">L. Susskind, « The World as a Hologram », <em>Journal of Mathematical Physics</em> 36, 6377-6396 (1995).</li>
-      <li id="fr-ref13">J. A. Wheeler, « Information, Physics, Quantum: The Search for Links », dans W. H. Zurek (dir.), <em>Complexity, Entropy, and the Physics of Information</em>, Addison-Wesley (1990).</li>
-      <li id="fr-ref14">J. Maldacena, « The Large N Limit of Superconformal Field Theories and Supergravity », <em>Advances in Theoretical and Mathematical Physics</em> 2, 231-252 (1998).</li>
-      <li id="fr-ref15">M. Van Raamsdonk, « Building up spacetime with quantum entanglement », <em>General Relativity and Gravitation</em> 42, 2323-2329 (2010).</li>
-      <li id="fr-ref16">J. Maldacena &amp; L. Susskind, « Cool horizons for entangled black holes », <em>Fortschritte der Physik</em> 61, 781-811 (2013).</li>
-      <li id="fr-ref17">T. Nagel, « What Is It Like to Be a Bat? », <em>The Philosophical Review</em> 83, 435-450 (1974).</li>
-      <li id="fr-ref18">D. J. Chalmers, <em>The Conscious Mind: In Search of a Fundamental Theory</em>, Oxford University Press (1996).</li>
-      <li id="fr-ref19">D. C. Dennett, « The Unimagined Preposterousness of Zombies », <em>Journal of Consciousness Studies</em> 2 (4), 322-325 (1995).</li>
-      <li id="fr-ref20">F. Jackson, « Epiphenomenal Qualia », <em>The Philosophical Quarterly</em> 32, 127-136 (1982).</li>
-      <li id="fr-ref21">D. Lewis, « What Experience Teaches », <em>Proceedings of the Russellian Society</em> (University of Sydney) 13, 29-57 (1988) ; repris dans W. G. Lycan (dir.), <em>Mind and Cognition</em>, Blackwell (1990).</li>
-      <li id="fr-ref22">F. Jackson, « Mind and Illusion », dans A. O’Hear (dir.), <em>Minds and Persons</em> (Royal Institute of Philosophy Supplement 53), Cambridge University Press (2003).</li>
-      <li id="fr-ref23">N. Bostrom, « Are You Living in a Computer Simulation? », <em>The Philosophical Quarterly</em> 53, 243-255 (2003).</li>
-      <li id="fr-ref24">N. Bostrom, <em>Anthropic Bias: Observation Selection Effects in Science and Philosophy</em>, Routledge (2002).</li>
-      <li id="fr-ref25">J. Leslie, <em>The End of the World: The Science and Ethics of Human Extinction</em>, Routledge (1996).</li>
-      <li id="fr-ref26">E. A. Abbott, <em>Flatland: A Romance of Many Dimensions</em>, Seeley &amp; Co. (1884).</li>
-      <li id="fr-ref27">S. R. Beane, Z. Davoudi &amp; M. J. Savage, « Constraints on the Universe as a Numerical Simulation », <em>The European Physical Journal A</em> 50, 148 (2014).</li>
-      <li id="fr-ref28">S. Wolfram, <em>A New Kind of Science</em>, Wolfram Media (2002).</li>
-    </ol>
-  </section>
-
-  </article>
-
-  <!-- language switch -->
-  <div class="langfab" role="group" aria-label="Language / Langue">
-    <button type="button" class="langfab__btn is-active" data-lang="en" aria-pressed="true"><svg viewBox="0 0 60 30" aria-hidden="true"><clipPath id="ukc"><rect width="60" height="30"/></clipPath><g clip-path="url(#ukc)"><rect width="60" height="30" fill="#012169"/><path d="M0,0 60,30 M60,0 0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 60,30 M60,0 0,30" stroke="#C8102E" stroke-width="4"/><path d="M30,0 V30 M0,15 H60" stroke="#fff" stroke-width="10"/><path d="M30,0 V30 M0,15 H60" stroke="#C8102E" stroke-width="6"/></g></svg>EN</button>
-    <button type="button" class="langfab__btn" data-lang="fr" aria-pressed="false"><svg viewBox="0 0 60 30" aria-hidden="true"><rect width="60" height="30" fill="#fff"/><rect width="20" height="30" fill="#0055A4"/><rect x="40" width="20" height="30" fill="#EF4135"/></svg>FR</button>
-  </div>
 
   <footer class="footer">
     <p>© <span id="year"></span> MANTIS VEX. ALL SIGNALS RESERVED.</p>
@@ -497,61 +85,5 @@
   </footer>
 
   <script src="../js/main.js"></script>
-  <script>
-    (function () {
-      "use strict";
-
-      /* ---- reading progress ---- */
-      var bar = document.getElementById("progress");
-      function updateProgress() {
-        if (!bar) return;
-        var h = document.documentElement;
-        var height = h.scrollHeight - h.clientHeight;
-        bar.style.width = (height > 0 ? (h.scrollTop / height) * 100 : 0) + "%";
-      }
-      document.addEventListener("scroll", updateProgress, { passive: true });
-      window.addEventListener("resize", updateProgress);
-
-      /* ---- language switch ---- */
-      var KEY = "mv-essay-lang";
-      var titles = {
-        en: "The World Is a Computation // MANTIS VEX",
-        fr: "Le monde est un calcul // MANTIS VEX"
-      };
-      var articles = {
-        en: document.getElementById("essay-en"),
-        fr: document.getElementById("essay-fr")
-      };
-      var buttons = document.querySelectorAll(".langfab__btn");
-
-      function setLang(lang, store) {
-        if (!articles[lang]) lang = "en";
-        Object.keys(articles).forEach(function (k) {
-          articles[k].hidden = k !== lang;
-        });
-        buttons.forEach(function (b) {
-          var on = b.getAttribute("data-lang") === lang;
-          b.classList.toggle("is-active", on);
-          b.setAttribute("aria-pressed", String(on));
-        });
-        document.documentElement.lang = lang;
-        document.title = titles[lang];
-        if (store) { try { localStorage.setItem(KEY, lang); } catch (e) {} }
-        updateProgress();
-      }
-
-      var saved = null;
-      try { saved = localStorage.getItem(KEY); } catch (e) {}
-      var browserFr = (navigator.language || "").toLowerCase().indexOf("fr") === 0;
-      setLang(saved || (browserFr ? "fr" : "en"), false);
-
-      buttons.forEach(function (b) {
-        b.addEventListener("click", function () {
-          setLang(b.getAttribute("data-lang"), true);
-          window.scrollTo({ top: 0 });
-        });
-      });
-    })();
-  </script>
 </body>
 </html>

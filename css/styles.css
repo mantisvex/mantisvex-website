@@ -477,8 +477,59 @@ a:hover { color: var(--blood); }
 .soon__status { font-family: var(--font-mono); font-size: .74rem; letter-spacing: 3px; color: var(--ink-dim); }
 
 /* =========================================================
+   WRITING INDEX — text explorer
+   ========================================================= */
+.texts {
+  position: relative; z-index: 2;
+  max-width: 780px; margin: 0 auto;
+  padding: 10px 20px 90px;
+  display: flex; flex-direction: column; gap: 26px;
+}
+.textcard {
+  display: block; border: 1px solid var(--line); background: var(--panel);
+  padding: 26px 28px 22px; transition: border-color .25s, box-shadow .25s, transform .25s;
+}
+.textcard:hover {
+  border-color: var(--acid); box-shadow: 0 0 28px rgba(155, 219, 31, .12);
+  transform: translateY(-2px); color: inherit;
+}
+.textcard__meta {
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing: 2px;
+  color: var(--ink-dim); display: flex; flex-wrap: wrap; gap: 6px 18px;
+  margin-bottom: 14px;
+}
+.textcard__meta b { color: var(--acid-2); font-weight: 400; }
+.textcard__title {
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  font-weight: 600; font-size: clamp(1.5rem, 4vw, 2rem); line-height: 1.15;
+  letter-spacing: -.01em; color: #e8eadd;
+}
+.textcard:hover .textcard__title { color: #fff; }
+.textcard__alt {
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  font-style: italic; font-size: 1.02rem; color: var(--ink-dim); margin-top: 4px;
+}
+.textcard__dek {
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  font-size: .98rem; line-height: 1.65; color: #9aa190; margin-top: 14px;
+}
+.textcard__go {
+  display: inline-block; margin-top: 16px;
+  font-family: var(--font-mono); font-size: .74rem; letter-spacing: 3px;
+  color: var(--acid); opacity: .55; transition: opacity .25s, transform .25s;
+}
+.textcard:hover .textcard__go { opacity: 1; text-shadow: var(--glow-acid); transform: translateX(4px); }
+
+/* =========================================================
    WRITING PAGE — long-form essay
    ========================================================= */
+.essay-back {
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing: .13em;
+  text-transform: uppercase; margin: 0 0 2.4rem;
+}
+.essay-back a { color: var(--ink-dim); }
+.essay-back a:hover { color: var(--acid); }
+
 .essay-progress {
   position: fixed; top: 0; left: 0; height: 2px; width: 0%;
   background: var(--acid); box-shadow: var(--glow-acid); opacity: .9; z-index: 55;

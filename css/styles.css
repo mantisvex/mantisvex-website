@@ -553,6 +553,14 @@ a:hover { color: var(--blood); }
   font-weight: 600; font-size: clamp(2.2rem, 7vw, 3.4rem); line-height: 1.05;
   letter-spacing: -.015em; margin: 0 0 1.6rem; color: #e8eadd;
 }
+.essay .subtitle {
+  font-style: italic; font-size: 1.15rem; color: #9aa190;
+  letter-spacing: .01em; margin: -0.8rem 0 1.1rem;
+}
+.essay .byline {
+  font-family: var(--font-mono); font-size: .72rem; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--acid-2); margin: 0 0 2rem;
+}
 .essay .dek { color: #9aa190; font-size: 1.05rem; line-height: 1.7; margin: 0 0 2.2rem; }
 .essay .dek strong { color: #d6d9c9; font-weight: 600; }
 .essay .runin {
